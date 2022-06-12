@@ -1,7 +1,13 @@
-node_modules
+/node_modules
 
-.cache
+/.cache
+/api
 .vercel
-
+/public/build
 public/build
 api/_build
+.env
+
+/app/styles/index.output.css
+package-lock.json
+.DS_Store
