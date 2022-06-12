@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { React, profilePicture } from "~/assets";
+import { ReactIcon, profilePicture } from "~/assets";
 
 const Home = (): React.ReactElement => (
   <Fragment>
@@ -16,7 +16,7 @@ const Home = (): React.ReactElement => (
       <h3 className="pt-2 text-4xl font-semibold text-gray-400 md:pt-3 md:text-5xl lg:text-6xl">
         I build things with{" "}
         <span className="text-[#61dafb]">
-          React <React className="inline-block h-8 w-8" />
+          React <ReactIcon className="inline-block h-8 w-8" />
         </span>
         .
       </h3>

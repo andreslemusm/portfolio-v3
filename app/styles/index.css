@@ -4,6 +4,6 @@
 
 @layer base {
   a {
-    @apply transition-colors rounded-sm focus:outline-none focus:ring-2 focus:ring-green-300;
+    @apply rounded-sm transition-colors focus:outline-none focus:ring-2 focus:ring-green-300;
   }
 }

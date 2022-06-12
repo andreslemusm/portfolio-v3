@@ -1,4 +1,4 @@
-import { Brand } from "~/assets";
+import { BrandIcon } from "~/assets";
 import { Fragment } from "react";
 import { classNames } from "~/utils/formatters";
 import { socialNetworks } from "~/utils/constants";
@@ -18,7 +18,7 @@ const Layout = (): React.ReactElement => (
   <div className="container mx-auto px-5">
     <header className="flex items-center justify-between py-10">
       <Link to="/" className="relative" aria-label="Home" prefetch="intent">
-        <Brand className="relative z-10 h-14 w-14 text-[#1092ba] mix-blend-difference md:h-20 md:w-20" />
+        <BrandIcon className="relative z-10 h-14 w-14 text-[#1092ba] mix-blend-difference md:h-20 md:w-20" />
         {/* Gradient animation */}
         <div className="absolute inset-0 z-0">
           <svg
@@ -252,7 +252,7 @@ const Layout = (): React.ReactElement => (
               <div className="overflow-hidden rounded-lg bg-gray-800 shadow-md ring-1 ring-black ring-opacity-5">
                 <div className="flex items-center justify-between px-5 pt-4">
                   <div>
-                    <Brand className="h-8 w-auto" />
+                    <BrandIcon className="h-8 w-auto" />
                   </div>
                   <div className="-mr-2">
                     <Popover.Button as={Fragment}>

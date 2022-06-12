@@ -1,8 +1,10 @@
-type ReactProps = {
+type ReactIconProps = {
   className?: string;
 };
 
-export const React = ({ className }: ReactProps) => (
+export const ReactIcon = ({
+  className,
+}: ReactIconProps): React.ReactElement => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="-11.5 -10.23174 23 20.46348"
