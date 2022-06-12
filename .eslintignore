@@ -1,13 +1,13 @@
-node_modules
+/node_modules
 
 /.cache
-/server/index.js
-/server/index.js.map
+/api
+.vercel
 /public/build
-preferences.arc
-sam.json
-sam.yaml
+public/build
+api/_build
 .env
 
 /app/styles/index.output.css
 package-lock.json
+.DS_Store
