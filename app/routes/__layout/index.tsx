@@ -3,7 +3,7 @@ import type { HeadersFunction } from "@remix-run/node";
 import { ReactIcon, profilePicture } from "~/assets";
 
 const headers: HeadersFunction = () => ({
-  "Cache-Control": "max-age=86400, stale-while-revalidate=3.154e7",
+  "Cache-Control": "s-maxage=86400, stale-while-revalidate",
 });
 
 const Home = (): React.ReactElement => (

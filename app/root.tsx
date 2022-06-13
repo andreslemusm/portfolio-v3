@@ -53,10 +53,27 @@ const links: LinksFunction = () => [
   },
   // Stylesheets
   { rel: "stylesheet", href: styles },
-  /* Museo Sans Rounded 100, 300, 700 */
+  /* Inter 400, 600, 700 */
   {
-    rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap",
+    rel: "preload",
+    as: "font",
+    href: "https://fonts.gstatic.com/s/inter/v11/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2",
+    type: "font/woff2",
+    crossOrigin: "anonymous",
+  },
+  {
+    rel: "preload",
+    as: "font",
+    href: "https://fonts.gstatic.com/s/inter/v11/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2",
+    type: "font/woff2",
+    crossOrigin: "anonymous",
+  },
+  {
+    rel: "preload",
+    as: "font",
+    href: "https://fonts.gstatic.com/s/inter/v11/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2",
+    type: "font/woff2",
+    crossOrigin: "anonymous",
   },
 ];
 
@@ -67,7 +84,7 @@ const App = (): React.ReactElement => {
         <Meta />
         <Links />
       </head>
-      <body className="bg-gray-900 font-sans text-gray-400 antialiased">
+      <body className="font-inter bg-gray-900 text-gray-400 antialiased">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
