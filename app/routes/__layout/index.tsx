@@ -1,5 +1,10 @@
 import { Fragment } from "react";
+import type { HeadersFunction } from "@remix-run/node";
 import { ReactIcon, profilePicture } from "~/assets";
+
+const headers: HeadersFunction = () => ({
+  "Cache-Control": "max-age=86400, stale-while-revalidate=3.154e7",
+});
 
 const Home = (): React.ReactElement => (
   <Fragment>
@@ -37,4 +42,5 @@ const Home = (): React.ReactElement => (
   </Fragment>
 );
 
+export { headers };
 export default Home;
