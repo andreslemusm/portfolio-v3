@@ -27,7 +27,7 @@ const Layout = (): React.ReactElement => (
       <Popover as="div" className="md:hidden">
         <Popover.Button
           as="button"
-          className="p-2 text-green-300 transition hover:bg-green-300 hover:bg-opacity-5 hover:text-green-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+          className="p-2 text-green-300 transition hover:bg-green-300 hover:bg-opacity-5 hover:text-green-400 focus:outline-none focus:ring-1 focus:ring-green-300"
         >
           <span className="sr-only">Open navigation menu</span>
           <AiOutlineMenu className="h-6 w-6" aria-hidden="true" />
