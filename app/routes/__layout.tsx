@@ -4,7 +4,9 @@ import { classNames } from "~/utils/formatters";
 import { socialNetworks } from "~/utils/constants";
 import {
   AiFillLinkedin,
+  AiOutlineClose,
   AiOutlineGithub,
+  AiOutlineMenu,
   AiOutlineTwitter,
 } from "react-icons/ai";
 import { Link, NavLink, Outlet } from "@remix-run/react";
@@ -12,7 +14,7 @@ import { Popover, Transition } from "@headlessui/react";
 
 const myMail = "mailto:aclmadrid04@gmail.com";
 
-const navItems = ["home", "blog", "about"];
+const navItems = ["home", "projects", "about"];
 
 const Layout = (): React.ReactElement => (
   <div className="container mx-auto px-5">
@@ -23,8 +25,12 @@ const Layout = (): React.ReactElement => (
       </Link>
       {/* Navigation */}
       <Popover as="div" className="md:hidden">
-        <Popover.Button as={Fragment}>
-          <button aria-label="Open navigation menu" />
+        <Popover.Button
+          as="button"
+          className="p-2 text-green-300 transition hover:bg-green-300 hover:bg-opacity-5 hover:text-green-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+        >
+          <span className="sr-only">Open navigation menu</span>
+          <AiOutlineMenu className="h-6 w-6" aria-hidden="true" />
         </Popover.Button>
         <Transition
           as={Fragment}
@@ -39,25 +45,25 @@ const Layout = (): React.ReactElement => (
             focus
             className="absolute inset-x-0 top-0 z-20 origin-top-right transform p-2 transition"
           >
-            {({ close }) => (
-              <div className="overflow-hidden rounded-lg bg-gray-800 shadow-md ring-1 ring-black ring-opacity-5">
-                <div className="flex items-center justify-between px-5 pt-4">
-                  <div>
-                    <BrandIcon className="h-8 w-auto" />
-                  </div>
-                  <div className="-mr-2">
-                    <Popover.Button as={Fragment}>
-                      <button
-                        // icon={HiX}
-                        aria-label="Close navigation menu"
-                      />
-                    </Popover.Button>
-                  </div>
+            <div className="overflow-hidden rounded-lg bg-gray-800 shadow-md ring-1 ring-black ring-opacity-5">
+              <div className="flex items-center justify-between px-5 pt-4">
+                <div>
+                  <BrandIcon className="h-8 w-auto" />
                 </div>
-                <div className="my-5 space-y-1 px-2">
-                  {navItems.map((navItem) => (
+                <div className="-mr-2">
+                  <Popover.Button
+                    as="button"
+                    className="text-green-300 transition hover:text-green-400 focus:outline-none focus:ring-1 focus:ring-green-300"
+                  >
+                    <span className="sr-only">Close navigation menu</span>
+                    <AiOutlineClose className="h-6 w-6" aria-hidden="true" />
+                  </Popover.Button>
+                </div>
+              </div>
+              <div className="my-5 space-y-1 px-2">
+                {navItems.map((navItem) => (
+                  <Popover.Button key={navItem} as={Fragment}>
                     <NavLink
-                      key={navItem}
                       to={navItem === "home" ? "/" : `/${navItem}`}
                       prefetch="intent"
                       className={({ isActive }) =>
@@ -71,17 +77,17 @@ const Layout = (): React.ReactElement => (
                     >
                       {navItem}
                     </NavLink>
-                  ))}
-                  <Popover.Button
-                    as="a"
-                    href={myMail}
-                    className="block rounded-md px-2 py-2 text-sm text-green-300 transition hover:bg-green-300 hover:bg-opacity-5 hover:text-green-400"
-                  >
-                    Contact
                   </Popover.Button>
-                </div>
+                ))}
+                <Popover.Button
+                  as="a"
+                  href={myMail}
+                  className="block rounded-md px-2 py-2 text-sm text-green-300 transition hover:bg-green-300 hover:bg-opacity-5 hover:text-green-400"
+                >
+                  Contact
+                </Popover.Button>
               </div>
-            )}
+            </div>
           </Popover.Panel>
         </Transition>
       </Popover>
