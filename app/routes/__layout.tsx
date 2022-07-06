@@ -17,7 +17,7 @@ const myMail = "mailto:aclmadrid04@gmail.com";
 const navItems = ["home", "projects", "about"];
 
 const Layout = (): React.ReactElement => (
-  <div className="container mx-auto px-5">
+  <div className="container mx-auto flex min-h-screen flex-col justify-between">
     <header className="flex items-center justify-between py-10">
       <Link to="/" className="relative" aria-label="Home" prefetch="intent">
         <BrandIcon className="relative z-10 h-14 w-14 text-[#1092ba] mix-blend-difference md:h-20 md:w-20" />
@@ -116,7 +116,7 @@ const Layout = (): React.ReactElement => (
       </div>
     </header>
 
-    <main className="px-1 md:px-2">
+    <main className="grow px-1 md:px-2">
       <Outlet />
     </main>
 
