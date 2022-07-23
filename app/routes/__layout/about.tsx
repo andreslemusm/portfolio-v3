@@ -55,7 +55,7 @@ const About = (): React.ReactElement => (
           development (I used{" "}
           <a href="https://roadmap.sh/frontend">this roadmap</a> to track the
           topics I needed to learn), I spent almost 3 months learning everything
-          from HTML up to ReactJS. Finally, I got my first job in May 2020 at{" "}
+          from HTML up to ReactJS. Finally, I got my first job in May 2019 at{" "}
           <a href="https://fluidattacks.com/">Fluid Attacks</a>.
         </p>
         <p>Like everyone, I had difficulties in my learning process:</p>
