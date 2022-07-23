@@ -88,7 +88,7 @@ const About = (): React.ReactElement => (
           been developing websites from{" "}
           <a href="https://fithub.com.co/">e-commerce sites</a> to{" "}
           <a href="https://app.carrierassure.com/">web applications</a> for more
-          than 3 year.
+          than 3 years.
         </p>
         <p>
           I continue spending a lot of time learning new technologies, patterns,
