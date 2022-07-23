@@ -83,12 +83,12 @@ const About = (): React.ReactElement => (
           <a href="#now">#</a> Now
         </h2>
         <p>
-          I now work as a Frontend Tech Lead for the Ottomoto account at{" "}
-          <a href="https://www.leangroup.com/solutions/leantech">Lean Tech</a>.
-          I&apos;ve been developing websites from{" "}
+          I now work as the Lead Front End Engineer at{" "}
+          <a href="https://www.carrierassure.com/">Carrier Assure</a>. I&apos;ve
+          been developing websites from{" "}
           <a href="https://fithub.com.co/">e-commerce sites</a> to{" "}
-          <a href="https://v2.ottomotoapp.com/">web applications</a> for more
-          than 1 year.
+          <a href="https://app.carrierassure.com/">web applications</a> for more
+          than 3 year.
         </p>
         <p>
           I continue spending a lot of time learning new technologies, patterns,
