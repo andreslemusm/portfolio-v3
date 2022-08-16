@@ -1,12 +1,10 @@
-/node_modules
+node_modules
 
 /.cache
-/api
-.vercel
 /public/build
-public/build
-api/_build
+/.netlify
 .env
+
 
 /app/styles/index.output.css
 package-lock.json
