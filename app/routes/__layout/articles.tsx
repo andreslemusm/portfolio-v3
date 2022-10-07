@@ -5,9 +5,9 @@ const headers: HeadersFunction = () => ({
   "Cache-Control": "public, s-maxage=86400, stale-while-revalidate",
 });
 
-const Projects = (): React.ReactElement => (
-  <SimpleLayout title="Projects" intro="Coming Soon..." />
+const Articles = (): React.ReactElement => (
+  <SimpleLayout title="Articles" intro="Coming Soon..." />
 );
 
 export { headers };
-export default Projects;
+export default Articles;
