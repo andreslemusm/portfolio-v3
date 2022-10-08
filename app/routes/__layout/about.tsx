@@ -5,7 +5,7 @@ import type { HeadersFunction, MetaFunction } from "@remix-run/node";
 import { mail, socialNetworks } from "~/utils/constants";
 
 const headers: HeadersFunction = () => ({
-  "Cache-Control": "public, s-maxage=86400, stale-while-revalidate",
+  "Cache-Control": "public, max-age=0, stale-while-revalidate, s-maxage=86400",
 });
 
 const meta: MetaFunction = () => ({
