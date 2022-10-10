@@ -53,7 +53,7 @@ const Home = (): React.ReactElement => (
         </div>
       </div>
     </Container>
-    <div className="mt-16 sm:mt-20">
+    {/* <div className="mt-16 sm:mt-20">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
         {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
           <div
@@ -72,7 +72,7 @@ const Home = (): React.ReactElement => (
           </div>
         ))}
       </div>
-    </div>
+    </div> */}
     <Container className="mt-24 md:mt-28">
       <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
         <div className="flex flex-col gap-16">
