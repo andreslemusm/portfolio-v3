@@ -7,7 +7,7 @@ import type { HeadersFunction, MetaFunction } from "@remix-run/node";
 import { carrierAssure, fithub, fluidAttacks, leanGroup } from "~/assets";
 
 const headers: HeadersFunction = () => ({
-  "Cache-Control": "public, max-age=1, stale-while-revalidate=3.154e7",
+  "Cache-Control": "public, max-age=1, stale-while-revalidate=31536000",
 });
 
 const meta: MetaFunction = () => ({
