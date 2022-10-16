@@ -1,10 +1,21 @@
 import { Button } from "~/components/button";
 import { Container } from "~/components/container";
 import { Fragment } from "react";
+import clsx from "clsx";
 import { socialNetworks } from "~/utils/constants";
 import { FaBriefcase, FaCloudDownloadAlt } from "react-icons/fa";
 import type { HeadersFunction, MetaFunction } from "@remix-run/node";
-import { carrierAssure, fithub, fluidAttacks, leanGroup } from "~/assets";
+import {
+  barcelona,
+  carrierAssure,
+  cartagena,
+  fithub,
+  fluidAttacks,
+  leanGroup,
+  paris,
+  seville,
+  zipaquira,
+} from "~/assets";
 
 const headers: HeadersFunction = () => ({
   "Cache-Control": "public, max-age=1, stale-while-revalidate=31536000",
@@ -53,26 +64,28 @@ const Home = (): React.ReactElement => (
         </div>
       </div>
     </Container>
-    {/* <div className="mt-16 sm:mt-20">
+    <div className="mt-16 sm:mt-20">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
-          <div
-            key={image.src}
-            className={clsx(
-              "relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl",
-              rotations[imageIndex % rotations.length]
-            )}
-          >
-            <Image
-              src={image}
-              alt=""
-              sizes="(min-width: 640px) 18rem, 11rem"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-          </div>
-        ))}
+        {[zipaquira, seville, cartagena, paris, barcelona].map(
+          (image, imageIndex) => (
+            <div
+              key={image}
+              className={clsx(
+                "relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl",
+                rotations[imageIndex % rotations.length]
+              )}
+            >
+              <img
+                src={image}
+                alt=""
+                sizes="(min-width: 640px) 18rem, 11rem"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            </div>
+          )
+        )}
       </div>
-    </div> */}
+    </div>
     <Container className="mt-24 md:mt-28">
       <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
         <div className="flex flex-col gap-16">
@@ -88,7 +101,7 @@ const Home = (): React.ReactElement => (
             </h2>
             <ol className="mt-6 space-y-4">
               {resume.map((role) => (
-                <li key={role.title} className="flex gap-4">
+                <li key={role.company} className="flex gap-4">
                   <div className="mt-1 grid h-10 w-10 flex-none place-items-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                     <img src={role.logo} alt="" className="h-7 w-7" />
                   </div>
@@ -127,7 +140,13 @@ const Home = (): React.ReactElement => (
               ))}
             </ol>
             {/* Add functionality */}
-            <Button variant="secondary" className="group mt-6 w-full">
+            <Button
+              as="anchor"
+              href="/build/_assets/cv.pdf"
+              variant="secondary"
+              className="group mt-6 w-full"
+              download
+            >
               Download CV
               <FaCloudDownloadAlt className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
             </Button>
@@ -140,7 +159,7 @@ const Home = (): React.ReactElement => (
 
 const resume = [
   {
-    company: "Carrier Assure",
+    company: "Carrier Assure (LSG Client)",
     title: "Lead Front-end Engineer",
     logo: carrierAssure,
     start: "Nov 2021",

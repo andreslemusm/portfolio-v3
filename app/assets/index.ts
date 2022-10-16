@@ -6,3 +6,8 @@ export { default as fluidAttacks } from "./fluid-attacks.svg";
 export { default as fithub } from "./fithub.webp";
 export { default as leanGroup } from "./lean-group.webp";
 export { default as carrierAssure } from "./carrier-assure.webp";
+export { default as cartagena } from "./cartagena.webp";
+export { default as barcelona } from "./barcelona.webp";
+export { default as paris } from "./paris.webp";
+export { default as seville } from "./seville.webp";
+export { default as zipaquira } from "./zipaquira.webp";
