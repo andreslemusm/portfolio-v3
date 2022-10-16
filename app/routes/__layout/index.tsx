@@ -142,7 +142,7 @@ const Home = (): React.ReactElement => (
             {/* Add functionality */}
             <Button
               as="anchor"
-              href="/build/_assets/cv.pdf"
+              href="/cv.pdf"
               variant="secondary"
               className="group mt-6 w-full"
               download
