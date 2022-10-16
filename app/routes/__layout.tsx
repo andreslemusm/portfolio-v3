@@ -345,17 +345,15 @@ const Layout = (): React.ReactElement => {
               <InnerContainer>
                 <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
                   <div className="flex gap-6 text-sm ">
-                    {["about", "articles", "projects", "speaking", "uses"].map(
-                      (path) => (
-                        <Link
-                          key={path}
-                          to={`/${path}`}
-                          className="font-medium capitalize text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400"
-                        >
-                          {path}
-                        </Link>
-                      )
-                    )}
+                    {paths.map((path) => (
+                      <Link
+                        key={path}
+                        to={`/${path}`}
+                        className="font-medium capitalize text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400"
+                      >
+                        {path}
+                      </Link>
+                    ))}
                   </div>
                   <p className="text-sm text-zinc-400 dark:text-zinc-500">
                     &copy; {new Date().getFullYear()} Andres Lemus. All rights
@@ -397,6 +395,6 @@ const Avatar = ({ large = false, className, style }: AvatarProps) => (
   </Link>
 );
 
-const paths = ["about", "articles", "projects", "speaking", "uses"];
+const paths = ["about", "articles", "projects"];
 
 export default Layout;
