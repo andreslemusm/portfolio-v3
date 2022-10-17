@@ -139,7 +139,6 @@ const Home = (): React.ReactElement => (
                 </li>
               ))}
             </ol>
-            {/* Add functionality */}
             <Button
               as="anchor"
               href="/cv.pdf"

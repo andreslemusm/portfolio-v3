@@ -245,6 +245,7 @@ const Layout = (): React.ReactElement => {
                                     as={Link}
                                     to={`/${path}`}
                                     className="block py-2 capitalize"
+                                    prefetch="intent"
                                   >
                                     {path}
                                   </Popover.Button>
@@ -272,6 +273,7 @@ const Layout = (): React.ReactElement => {
                                   : "hover:text-teal-500 dark:hover:text-teal-400"
                               )
                             }
+                            prefetch="intent"
                           >
                             {({ isActive }) => (
                               <Fragment>
@@ -349,6 +351,7 @@ const Layout = (): React.ReactElement => {
                       <Link
                         key={path}
                         to={`/${path}`}
+                        prefetch="intent"
                         className="font-medium capitalize text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400"
                       >
                         {path}
@@ -382,6 +385,7 @@ const Avatar = ({ large = false, className, style }: AvatarProps) => (
     aria-label="Home"
     className={clsx(className, "pointer-events-auto")}
     style={style}
+    prefetch="intent"
   >
     <img
       src={profilePicture}
