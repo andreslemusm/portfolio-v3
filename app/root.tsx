@@ -17,7 +17,7 @@ const meta: MetaFunction = () => ({
   description: "Come check out Andres Lemus' home on the internet.",
   //  Open Graph / Facebook
   "og:type": "website",
-  "og:url": "https://andreslemus.dev/",
+  "og:url": "https://andreslemusm.com/",
   "og:title": "Hi, I'm Andres Lemus. I build things with React.",
   "og:description": "Come check out Andres Lemus' home on the internet.",
   "og:image": "/preview.png",
