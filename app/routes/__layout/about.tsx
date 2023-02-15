@@ -118,7 +118,7 @@ const About = (): React.ReactElement => (
             target="_blank"
             rel="noreferrer"
           >
-            <Mail className="h-5 w-5 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
+            <Mail className="h-5 w-5 flex-none text-zinc-500 transition group-hover:text-teal-500" />
             <span className="ml-4">{mail}</span>
           </a>
         </li>

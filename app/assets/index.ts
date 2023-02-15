@@ -11,3 +11,4 @@ export { default as barcelona } from "./barcelona.webp";
 export { default as paris } from "./paris.webp";
 export { default as seville } from "./seville.webp";
 export { default as zipaquira } from "./zipaquira.webp";
+export { default as rmdb } from "./rmdb.svg";
