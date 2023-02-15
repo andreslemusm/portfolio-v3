@@ -1,25 +1,30 @@
-import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import {
+  Github,
+  Instagram,
+  Linkedin,
+  Twitter,
+} from "@icons-pack/react-simple-icons";
 
 const socialNetworks = [
   {
     label: "Twitter",
     href: "https://twitter.com/andreslemusm1",
-    icon: FaTwitter,
+    icon: Twitter,
   },
   {
     label: "Instagram",
     href: "https://instagram.com/andreslemusm",
-    icon: FaInstagram,
+    icon: Instagram,
   },
   {
     label: "GitHub",
     href: "https://github.com/andreslemusm",
-    icon: FaGithub,
+    icon: Github,
   },
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/andreslemusm",
-    icon: FaLinkedin,
+    icon: Linkedin,
   },
 ];
 

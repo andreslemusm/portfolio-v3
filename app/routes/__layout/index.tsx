@@ -3,7 +3,6 @@ import { Container } from "~/components/container";
 import { Fragment } from "react";
 import clsx from "clsx";
 import { socialNetworks } from "~/utils/constants";
-import { FaBriefcase, FaCloudDownloadAlt } from "react-icons/fa";
 import type { HeadersFunction, MetaFunction } from "@remix-run/node";
 import {
   barcelona,
@@ -16,6 +15,7 @@ import {
   seville,
   zipaquira,
 } from "~/assets";
+import { Briefcase, DownloadCloud } from "lucide-react";
 
 const headers: HeadersFunction = () => ({
   "Cache-Control": "public, max-age=1, stale-while-revalidate=31536000",
@@ -96,7 +96,7 @@ const Home = (): React.ReactElement => (
         <div className="space-y-10 lg:pl-16 xl:pl-24">
           <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
             <h2 className="flex items-center text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-              <FaBriefcase className="h-5 w-5 flex-none" />
+              <Briefcase className="h-5 w-5 flex-none" />
               <span className="ml-4">Work</span>
             </h2>
             <ol className="mt-6 space-y-4">
@@ -147,7 +147,7 @@ const Home = (): React.ReactElement => (
               download
             >
               Download CV
-              <FaCloudDownloadAlt className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+              <DownloadCloud className="h-4 w-4 text-zinc-400 transition group-hover:text-zinc-600 group-active:text-zinc-600 dark:group-hover:text-zinc-50 dark:group-active:text-zinc-50" />
             </Button>
           </div>
         </div>
