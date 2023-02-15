@@ -1,8 +1,8 @@
 import { Container } from "~/components/container";
+import { Mail } from "lucide-react";
 import { portraitPicture } from "~/assets";
 import type { HeadersFunction, MetaFunction } from "@remix-run/node";
 import { mail, socialNetworks } from "~/utils/constants";
-import { Mail } from "lucide-react";
 
 const headers: HeadersFunction = () => ({
   "Cache-Control": "public, max-age=1, stale-while-revalidate=31536000",

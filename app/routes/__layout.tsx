@@ -1,6 +1,7 @@
 import { clamp } from "~/utils/formatters";
 import clsx from "clsx";
 import { profilePicture } from "~/assets";
+import { ChevronDown, Moon, Sun, X } from "lucide-react";
 import {
   Container,
   InnerContainer,
@@ -9,7 +10,6 @@ import {
 import { Fragment, useEffect, useRef } from "react";
 import { Link, NavLink, Outlet, useLocation } from "@remix-run/react";
 import { Popover, Transition } from "@headlessui/react";
-import { ChevronDown, Moon, Sun, X } from "lucide-react";
 
 const Layout = (): React.ReactElement => {
   const location = useLocation();

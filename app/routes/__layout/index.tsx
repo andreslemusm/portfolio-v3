@@ -3,6 +3,7 @@ import { Container } from "~/components/container";
 import { Fragment } from "react";
 import clsx from "clsx";
 import { socialNetworks } from "~/utils/constants";
+import { Briefcase, DownloadCloud } from "lucide-react";
 import type { HeadersFunction, MetaFunction } from "@remix-run/node";
 import {
   barcelona,
@@ -15,7 +16,6 @@ import {
   seville,
   zipaquira,
 } from "~/assets";
-import { Briefcase, DownloadCloud } from "lucide-react";
 
 const headers: HeadersFunction = () => ({
   "Cache-Control": "public, max-age=1, stale-while-revalidate=31536000",

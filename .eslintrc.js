@@ -25,9 +25,7 @@ module.exports = {
         "plugin:import/typescript",
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
-        "plugin:functional/external-recommended",
-        "plugin:functional/no-mutations",
-        "plugin:functional/no-object-orientation",
+        "plugin:functional/strict",
         "plugin:testing-library/react",
         "plugin:jest-dom/recommended",
         "prettier",
@@ -84,7 +82,6 @@ module.exports = {
             ignoreAccessorPattern: ["*.current", "*.displayName"],
           },
         ],
-        "functional/no-loop-statement": "error",
         "import/export": "error",
         "import/exports-last": "error",
         "import/first": "error",
@@ -158,6 +155,13 @@ module.exports = {
          * OOP patterns are disabled, so this rule is unnecesary.
          */
         "functional/no-mixed-type": "off",
+        "functional/prefer-immutable-types": "off",
+        "functional/no-throw-statements": "off",
+        "functional/type-declaration-immutability": "off",
+        "functional/functional-parameters": "off",
+        "functional/no-conditional-statements": "off",
+        "functional/no-expression-statements": "off",
+        "functional/no-return-void": "off",
       },
       settings: {
         react: {
