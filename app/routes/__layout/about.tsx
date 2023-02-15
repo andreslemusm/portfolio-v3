@@ -1,17 +1,20 @@
 import { Container } from "~/components/container";
 import { Mail } from "lucide-react";
+import { generateMetaTags } from "~/utils/meta-tags";
 import { portraitPicture } from "~/assets";
-import type { HeadersFunction, MetaFunction } from "@remix-run/node";
+import type { HeadersFunction, V2_MetaFunction } from "@remix-run/node";
 import { mail, socialNetworks } from "~/utils/constants";
 
 const headers: HeadersFunction = () => ({
   "Cache-Control": "public, max-age=1, stale-while-revalidate=31536000",
 });
 
-const meta: MetaFunction = () => ({
-  title: "About -  Andres Lemus",
-  description: "I&apos;m Andres Lemus. I build things with ReactJS.",
-});
+const meta: V2_MetaFunction = () =>
+  generateMetaTags({
+    title: "About | Andres Lemus",
+    description:
+      "I'm a front-end engineer, with a passion for building things with React",
+  });
 
 const About = (): React.ReactElement => (
   <Container className="mt-16 sm:mt-32">

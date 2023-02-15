@@ -2,9 +2,10 @@ import { Button } from "~/components/button";
 import { Container } from "~/components/container";
 import { Fragment } from "react";
 import clsx from "clsx";
+import { generateMetaTags } from "~/utils/meta-tags";
 import { socialNetworks } from "~/utils/constants";
 import { Briefcase, DownloadCloud } from "lucide-react";
-import type { HeadersFunction, MetaFunction } from "@remix-run/node";
+import type { HeadersFunction, V2_MetaFunction } from "@remix-run/node";
 import {
   barcelona,
   carrierAssure,
@@ -21,11 +22,11 @@ const headers: HeadersFunction = () => ({
   "Cache-Control": "public, max-age=1, stale-while-revalidate=31536000",
 });
 
-const meta: MetaFunction = () => ({
-  title: "Andres Lemus - Front-end engineer, and amateur traveler",
-  description:
-    "I'm Andres Lemus, a front-end engineer based in Medellin 🇨🇴. I'm the lead front-end engineer of Carrier Assure, where we develop technologies that empower companies or individuals to predict how a carrier will transport its goods",
-});
+const meta: V2_MetaFunction = () =>
+  generateMetaTags({
+    title: "Andres Lemus",
+    description: "Front-end Engineer",
+  });
 
 const Home = (): React.ReactElement => (
   <Fragment>

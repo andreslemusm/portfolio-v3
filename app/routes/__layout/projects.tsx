@@ -1,15 +1,23 @@
-import type { HeadersFunction } from "@remix-run/node";
 import { Link as LinkIcon } from "lucide-react";
 import { SimpleLayout } from "~/components/simple-layout";
+import { generateMetaTags } from "~/utils/meta-tags";
 import { rmdb } from "~/assets";
+import type { HeadersFunction, V2_MetaFunction } from "@remix-run/node";
 
 const headers: HeadersFunction = () => ({
   "Cache-Control": "public, max-age=1, stale-while-revalidate=31536000",
 });
 
+const meta: V2_MetaFunction = () =>
+  generateMetaTags({
+    title: "Projects | Andres Lemus",
+    description:
+      "I'm proud of the projects I've worked on and excited to share them with you.",
+  });
+
 const Projects = (): React.ReactElement => (
   <SimpleLayout
-    title="I'm proud of the projects I've worked on and excited to share them with you. "
+    title="I'm proud of the projects I've worked on and excited to share them with you."
     intro="You'll find a selection of projects that showcase my skills and experience in front-end development. I've worked on various types of projects, including e-commerce sites, web applications, and online platforms."
   >
     <ul className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
@@ -50,5 +58,5 @@ const Projects = (): React.ReactElement => (
   </SimpleLayout>
 );
 
-export { headers };
+export { headers, meta };
 export default Projects;

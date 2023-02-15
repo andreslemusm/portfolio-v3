@@ -399,6 +399,6 @@ const Avatar = ({ large = false, className, style }: AvatarProps) => (
   </Link>
 );
 
-const paths = ["about", "articles", "projects"];
+const paths = ["about", "projects", "blog"];
 
 export default Layout;
