@@ -28,10 +28,10 @@ const About = (): React.ReactElement => (
       </div>
       <div className="lg:order-first lg:row-span-2">
         <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-          I&apos;m a Front-end engineer. I build things with{" "}
+          I&apos;m a front-end engineer, with a passion for building things with{" "}
           <span
             style={{ color: "#61dafb" }}
-            className="inline-flex items-baseline gap-x-2"
+            className="inline-flex items-center gap-x-2"
           >
             React{" "}
             <svg
@@ -39,7 +39,7 @@ const About = (): React.ReactElement => (
               viewBox="-11.5 -10.23174 23 20.46348"
               width="24"
               height="24"
-              className="inline-block h-7 w-7"
+              className="h-9 w-9"
             >
               <circle cx="0" cy="0" r="2.05" fill="#61dafb"></circle>
               <g stroke="#61dafb" strokeWidth="1" fill="none">
@@ -53,47 +53,57 @@ const About = (): React.ReactElement => (
         </h1>
         <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
           <p>
-            I went to the{" "}
+            I started my journey into the world of tech at the{" "}
             <a
               href="https://unal.edu.co/"
               className="font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400"
             >
               National University of Colombia
-            </a>{" "}
-            where I studied Systems Engineer with an emphasis in Networking
-            (yes, I&apos;m a big fan of the internet 🤷‍♂️). I didn&apos;t graduate
-            and probably never will since I already learned the topics that
-            would make a difference in my career (OOP, FP, data structures, and
-            compilers). Also, today companies don&apos;t require you to have a
-            degree, so it isn&apos;t worth investing time.
+            </a>
+            , where I studied Systems Engineering with an emphasis in
+            Networking. While I didn&apos;t complete my degree, I gained
+            valuable knowledge in OOP, FP, data structures, and compilers, which
+            has helped me in my career.
           </p>
           <p>
-            After deciding to focus on learning everything related to front-end
-            development (I used this{" "}
+            I soon realized that front-end development was where my true passion
+            lay, so I decided to focus on learning everything related to this
+            field. I used a{" "}
             <a
               href="https://roadmap.sh/frontend"
               className="font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400"
             >
               roadmap
             </a>{" "}
-            to track the topics I needed to learn), I spent almost 3 months
-            learning everything from HTML up to ReactJS. Finally, I got my first
-            job in May 2019 at Fluid Attacks.
+            to track the topics I needed to learn, and after almost three months
+            of hard work, I became proficient in everything from HTML to
+            ReactJS. In May 2019, I landed my first job as a software engineer
+            at Fluid Attacks.
           </p>
           <p>
-            Like everyone, I had difficulties in my learning process: Something
-            didn&apos;t click immediately; I forgot about something I supposedly
-            learned a week before 😕; sometimes, it was just that the topic was
-            too difficult to wrap my head around. My advice if you&apos;re
-            having the same difficulties is to take this{" "}
+            Like many people, I encountered challenges along the way. Some
+            things didn&apos;t click immediately, and sometimes I forgot
+            something I had learned a week before. There were also times when
+            the topics were simply too difficult to wrap my head around. If
+            you&apos;re going through the same thing, I highly recommend this{" "}
             <a
               href="https://www.coursera.org/learn/learning-how-to-learn"
               className="font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400"
             >
               course
-            </a>
-            , it&apos;ll give you powerful tools to improve your learning
-            ability, and the best thing is freemium! 🥳.
+            </a>{" "}
+            that gave me powerful tools to improve my learning ability. And the
+            best thing? It&apos;s freemium, so you can start learning today!
+          </p>
+          <p>
+            Overall, I&apos;m passionate about building intuitive and
+            user-friendly interfaces, and I love using my skills to help
+            businesses achieve their goals. If you&apos;re looking for a
+            front-end engineer who&apos;s dedicated, hardworking, and always
+            looking to improve,{" "}
+            <strong className="font-medium text-zinc-800 dark:text-zinc-200">
+              let&apos;s chat!
+            </strong>
           </p>
         </div>
       </div>
