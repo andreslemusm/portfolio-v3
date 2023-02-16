@@ -1,5 +1,7 @@
 export * from "./brand-icon";
 export * from "./react-icon";
+export * from "./rmdb-icon";
+export * from "./ottomoto-icon";
 export { default as profilePicture } from "./profile-picture.webp";
 export { default as portraitPicture } from "./portrait-picture.webp";
 export { default as fluidAttacks } from "./fluid-attacks.svg";
@@ -11,4 +13,3 @@ export { default as barcelona } from "./barcelona.webp";
 export { default as paris } from "./paris.webp";
 export { default as seville } from "./seville.webp";
 export { default as zipaquira } from "./zipaquira.webp";
-export { default as rmdb } from "./rmdb.svg";
