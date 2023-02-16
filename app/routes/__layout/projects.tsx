@@ -2,7 +2,7 @@ import { Link as LinkIcon } from "lucide-react";
 import { SimpleLayout } from "~/components/simple-layout";
 import { generateMetaTags } from "~/utils/meta-tags";
 import type { HeadersFunction, V2_MetaFunction } from "@remix-run/node";
-import { OttomotoIcon, RMDBIcon } from "~/assets";
+import { OttomotoIcon, RMDBIcon, fithub } from "~/assets";
 
 const headers: HeadersFunction = () => ({
   "Cache-Control": "public, max-age=1, stale-while-revalidate=31536000",
@@ -25,7 +25,7 @@ const Projects = (): React.ReactElement => (
         {
           name: "Ottomoto",
           description:
-            "Platform design to make the car buying and selling process easier and more transparent for both buyers and sellers.",
+            "Platform to make the car buying and selling process easier and transparent.",
           link: {
             href: "https:/ottomoto.net",
             label: "ottomoto.net",
@@ -33,9 +33,19 @@ const Projects = (): React.ReactElement => (
           logo: <OttomotoIcon className="relative z-10 h-12 w-24 shrink-0" />,
         },
         {
+          name: "FitHub",
+          description: "The one-stop shop for healthy products.",
+          link: {
+            href: "https://fithub.com.co",
+            label: "fithub.com.co",
+          },
+          logo: (
+            <img src={fithub} className="relative z-10 h-12 w-auto" alt="" />
+          ),
+        },
+        {
           name: "RMDB",
-          description:
-            "Web-based platform that allows users to browse and discover movies.",
+          description: "Platform to browse and discover movies.",
           link: {
             href: "https://rmdb.andreslemusm.com",
             label: "rmdb.andreslemusm.com",
