@@ -27,7 +27,7 @@ const Projects = (): React.ReactElement => (
           description:
             "Platform to make the car buying and selling process easier and transparent.",
           link: {
-            href: "https:/ottomoto.net",
+            href: "https://ottomoto.net",
             label: "ottomoto.net",
           },
           logo: <OttomotoIcon className="relative z-10 h-12 w-24 shrink-0" />,
