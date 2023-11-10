@@ -1,5 +1,5 @@
-import type { LinksFunction } from "@remix-run/node";
-import styles from "./styles/index.output.css";
+import type { LinksFunction } from "@vercel/remix";
+import styles from "./tailwind.css";
 import {
   Links,
   LiveReload,
@@ -29,6 +29,8 @@ const links: LinksFunction = () => [
   // Stylesheets
   { rel: "stylesheet", href: styles },
 ];
+
+const config = { runtime: "edge" };
 
 const App = (): React.ReactElement => (
   <html lang="en" className="h-full antialiased">
@@ -81,5 +83,5 @@ const modeScript = `
   }
 `;
 
-export { links };
+export { links, config };
 export default App;

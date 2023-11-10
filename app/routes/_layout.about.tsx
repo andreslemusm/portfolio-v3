@@ -2,14 +2,14 @@ import { Container } from "~/components/container";
 import { Mail } from "lucide-react";
 import { generateMetaTags } from "~/utils/meta-tags";
 import { portraitPicture } from "~/assets";
-import type { HeadersFunction, V2_MetaFunction } from "@remix-run/node";
+import type { HeadersFunction, MetaFunction } from "@vercel/remix";
 import { mail, socialNetworks } from "~/utils/constants";
 
 const headers: HeadersFunction = () => ({
   "Cache-Control": "public, max-age=1, stale-while-revalidate=31536000",
 });
 
-const meta: V2_MetaFunction = () =>
+const meta: MetaFunction = () =>
   generateMetaTags({
     title: "About | Andres Lemus",
     description:

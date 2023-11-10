@@ -1,4 +1,4 @@
-import type { V2_HtmlMetaDescriptor } from "@remix-run/node";
+import type { MetaDescriptor } from "@vercel/remix";
 
 export const generateMetaTags = ({
   title,
@@ -19,7 +19,7 @@ export const generateMetaTags = ({
     },
     // Open Graph / Facebook
     { property: "og:type", content: "website" },
-    { property: "og:url", content: "https://andreslemusm.com/" },
+    { property: "og:url", content: "https://rmdb.andreslemusm.com/" },
     { property: "og:title", content: title },
     {
       property: "og:description",
@@ -27,11 +27,11 @@ export const generateMetaTags = ({
     },
     {
       property: "og:image",
-      content: "https://andreslemusm.com/preview.png",
+      content: "https://rmdb.andreslemusm.com/preview.png",
     },
     // Twitter
     { property: "twitter:card", content: "summary_large_image" },
-    { property: "twitter:url", content: "https://andreslemusm.com/" },
+    { property: "twitter:url", content: "https://rmdb.andreslemusm.com/" },
     { property: "twitter:title", content: title },
     {
       property: "twitter:description",
@@ -39,7 +39,7 @@ export const generateMetaTags = ({
     },
     {
       property: "twitter:image",
-      content: "https://andreslemusm.com/preview.png",
+      content: "https://rmdb.andreslemusm.com/preview.png",
     },
     // Favicons
     {
@@ -47,6 +47,6 @@ export const generateMetaTags = ({
       content: title,
     },
     { name: "application-name", content: title },
-    { name: "msapplication-TileColor", content: "#00aba9" },
+    { name: "msapplication-TileColor", content: "#2d89ef" },
     { name: "theme-color", content: "#ffffff" },
-  ] satisfies Array<V2_HtmlMetaDescriptor>;
+  ] satisfies Array<MetaDescriptor>;

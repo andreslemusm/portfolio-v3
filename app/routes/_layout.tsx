@@ -36,7 +36,7 @@ const Layout = (): React.ReactElement => {
       const scrollY = clamp(
         window.scrollY,
         0,
-        document.body.scrollHeight - window.innerHeight
+        document.body.scrollHeight - window.innerHeight,
       );
 
       if (isInitial.current) {
@@ -83,14 +83,14 @@ const Layout = (): React.ReactElement => {
       const scale = clamp(
         (scrollY * (fromScale - toScale)) / downDelay + toScale,
         fromScale,
-        toScale
+        toScale,
       );
 
       const x = clamp((scrollY * (fromX - toX)) / downDelay + toX, fromX, toX);
 
       setProperty(
         "--avatar-image-transform",
-        `translate3d(${x}rem, 0, 0) scale(${scale})`
+        `translate3d(${x}rem, 0, 0) scale(${scale})`,
       );
 
       const borderScale = 1 / (toScale / scale);
@@ -216,11 +216,11 @@ const Layout = (): React.ReactElement => {
                       <Transition.Child
                         as={Fragment}
                         enter="duration-150 ease-out"
-                        enterFrom="opacity-0 scale-95"
-                        enterTo="opacity-100 scale-100"
+                        enterFrom="scale-95 opacity-0"
+                        enterTo="scale-100 opacity-100"
                         leave="duration-150 ease-in"
-                        leaveFrom="opacity-100 scale-100"
-                        leaveTo="opacity-0 scale-95"
+                        leaveFrom="scale-100 opacity-100"
+                        leaveTo="scale-95 opacity-0"
                       >
                         <Popover.Panel
                           focus
@@ -270,7 +270,7 @@ const Layout = (): React.ReactElement => {
                                 "relative block px-3 py-2 capitalize transition",
                                 isActive
                                   ? "text-teal-500 dark:text-teal-400"
-                                  : "hover:text-teal-500 dark:hover:text-teal-400"
+                                  : "hover:text-teal-500 dark:hover:text-teal-400",
                               )
                             }
                             prefetch="intent"
@@ -299,16 +299,16 @@ const Layout = (): React.ReactElement => {
                       onClick={() => {
                         // Disable transitions temporarily
                         document.documentElement.classList.add(
-                          "[&_*]:!transition-none"
+                          "[&_*]:!transition-none",
                         );
                         window.setTimeout(() => {
                           document.documentElement.classList.remove(
-                            "[&_*]:!transition-none"
+                            "[&_*]:!transition-none",
                           );
                         }, 0);
 
                         const darkModeMediaQuery = window.matchMedia(
-                          "(prefers-color-scheme: dark)"
+                          "(prefers-color-scheme: dark)",
                         );
                         const isSystemDarkMode = darkModeMediaQuery.matches;
                         const isDarkMode =
@@ -320,7 +320,7 @@ const Layout = (): React.ReactElement => {
 
                         return window.localStorage.setItem(
                           "isDarkMode",
-                          isDarkMode.toString()
+                          isDarkMode.toString(),
                         );
                       }}
                     >
@@ -343,7 +343,7 @@ const Layout = (): React.ReactElement => {
         {/* Footer */}
         <footer className="mt-32">
           <OuterContainer>
-            <div className="border-t border-zinc-100 pt-10 pb-16 dark:border-zinc-700/40">
+            <div className="border-t border-zinc-100 pb-16 pt-10 dark:border-zinc-700/40">
               <InnerContainer>
                 <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
                   <div className="flex gap-6 text-sm ">
@@ -393,7 +393,7 @@ const Avatar = ({ large = false, className, style }: AvatarProps) => (
       sizes={large ? "4rem" : "2.25rem"}
       className={clsx(
         "rounded-full bg-zinc-100 object-cover dark:bg-zinc-800",
-        large ? "h-16 w-16" : "h-9 w-9"
+        large ? "h-16 w-16" : "h-9 w-9",
       )}
     />
   </Link>

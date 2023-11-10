@@ -1,9 +1,7 @@
-const colors = require("tailwindcss/colors");
+import type { Config } from "tailwindcss";
+import colors from "tailwindcss/colors";
 
-/**
- * @type {import('tailwindcss').Config}
- */
-module.exports = {
+export default {
   content: ["./app/**/*.{ts,tsx,js,jsx}"],
   darkMode: "class",
   plugins: [require("@tailwindcss/typography")],
@@ -14,11 +12,13 @@ module.exports = {
       // Neutrals
       zinc: colors.zinc,
       // Supporting
+      black: colors.black,
+      white: colors.white,
+      pink: colors.pink,
+      sky: colors.sky,
       inherit: colors.inherit,
       current: colors.current,
       transparent: colors.transparent,
-      black: colors.black,
-      white: colors.white,
     },
     fontSize: {
       xs: ["0.8125rem", { lineHeight: "1.5rem" }],
@@ -35,7 +35,11 @@ module.exports = {
       "8xl": ["6rem", { lineHeight: "1" }],
       "9xl": ["8rem", { lineHeight: "1" }],
     },
-    typography: (theme) => ({
+    typography: ({
+      theme,
+    }: {
+      theme: (path: string, defaultValue?: unknown) => string;
+    }) => ({
       invert: {
         css: {
           "--tw-prose-body": "var(--tw-prose-invert-body)",
@@ -316,4 +320,4 @@ module.exports = {
       },
     }),
   },
-};
+} satisfies Config;

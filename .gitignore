@@ -1,11 +1,14 @@
 node_modules
 
 /.cache
+/build
 /public/build
-/.netlify
 .env
 
+.vercel
+.output
 
-/app/styles/index.output.css
+/api/index.js
+/api/index.js.map
+
 package-lock.json
-.DS_Store

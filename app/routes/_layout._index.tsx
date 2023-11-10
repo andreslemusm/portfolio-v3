@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { generateMetaTags } from "~/utils/meta-tags";
 import { socialNetworks } from "~/utils/constants";
 import { Briefcase, DownloadCloud } from "lucide-react";
-import type { HeadersFunction, V2_MetaFunction } from "@remix-run/node";
+import type { HeadersFunction, MetaFunction } from "@vercel/remix";
 import {
   barcelona,
   carrierAssure,
@@ -22,7 +22,7 @@ const headers: HeadersFunction = () => ({
   "Cache-Control": "public, max-age=1, stale-while-revalidate=31536000",
 });
 
-const meta: V2_MetaFunction = () =>
+const meta: MetaFunction = () =>
   generateMetaTags({
     title: "Andres Lemus",
     description: "Front-end Engineer",
@@ -73,7 +73,7 @@ const Home = (): React.ReactElement => (
               key={image}
               className={clsx(
                 "relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl",
-                rotations[imageIndex % rotations.length]
+                rotations[imageIndex % rotations.length],
               )}
             >
               <img
@@ -83,7 +83,7 @@ const Home = (): React.ReactElement => (
                 className="absolute inset-0 h-full w-full object-cover"
               />
             </div>
-          )
+          ),
         )}
       </div>
     </div>

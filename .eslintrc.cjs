@@ -1,6 +1,4 @@
-/**
- * @type {import('eslint').Linter.Config}
- */
+/** @type {import("eslint").Linter.Config} */
 module.exports = {
   env: { node: true, es6: true },
   extends: [
@@ -67,8 +65,23 @@ module.exports = {
             memberSyntaxSortOrder: ["single", "all", "multiple", "none"],
           },
         ],
-        "functional/immutable-data": [
+        "no-restricted-imports": [
           "error",
+          {
+            patterns: [
+              {
+                group: ["@radix-ui/react-form"],
+                message: "Please use '~/components/lib' instead",
+              },
+              {
+                group: ["@remix-run/node"],
+                message: "Please use '@vercel/remix' instead",
+              },
+            ],
+          },
+        ],
+        "functional/immutable-data": [
+          "off",
           {
             ignoreImmediateMutation: true,
             /**
@@ -90,6 +103,7 @@ module.exports = {
         "import/no-absolute-path": "error",
         "import/no-cycle": ["error", { ignoreExternal: true }],
         "import/no-deprecated": "error",
+        "import/no-duplicates": "error",
         "import/no-extraneous-dependencies": [
           "error",
           { optionalDependencies: false },
@@ -106,9 +120,18 @@ module.exports = {
         "@typescript-eslint/consistent-type-imports": "error",
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "error",
+        "jsx-a11y/label-has-associated-control": [
+          "error",
+          {
+            controlComponents: ["Input", "Textarea"],
+          },
+        ],
         "unicorn/filename-case": [
           "error",
-          { case: "kebabCase", ignore: [/\$/] },
+          {
+            case: "kebabCase",
+            ignore: [/.\$/, /._/],
+          },
         ],
         "react/jsx-fragments": ["error", "element"],
         "react/function-component-definition": [
@@ -162,6 +185,7 @@ module.exports = {
         "functional/no-conditional-statements": "off",
         "functional/no-expression-statements": "off",
         "functional/no-return-void": "off",
+        "functional/no-try-statements": "off",
       },
       settings: {
         react: {
