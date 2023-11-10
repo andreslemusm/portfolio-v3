@@ -4,7 +4,7 @@ import { Fragment } from "react";
 import clsx from "clsx";
 import { generateMetaTags } from "~/utils/meta-tags";
 import { socialNetworks } from "~/utils/constants";
-import { Briefcase, DownloadCloud } from "lucide-react";
+import { BriefcaseIcon, DownloadCloudIcon } from "~/assets/icons/";
 import type { HeadersFunction, MetaFunction } from "@vercel/remix";
 import {
   barcelona,
@@ -97,7 +97,7 @@ const Home = (): React.ReactElement => (
         <div className="space-y-10 lg:pl-16 xl:pl-24">
           <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
             <h2 className="flex items-center text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-              <Briefcase className="h-5 w-5 flex-none" />
+              <BriefcaseIcon className="h-5 w-5 flex-none" />
               <span className="ml-4">Work</span>
             </h2>
             <ol className="mt-6 space-y-4">
@@ -148,7 +148,7 @@ const Home = (): React.ReactElement => (
               download
             >
               Download CV
-              <DownloadCloud className="h-4 w-4 text-zinc-400 transition group-hover:text-zinc-600 group-active:text-zinc-600 dark:group-hover:text-zinc-50 dark:group-active:text-zinc-50" />
+              <DownloadCloudIcon className="h-4 w-4 text-zinc-400 transition group-hover:text-zinc-600 group-active:text-zinc-600 dark:group-hover:text-zinc-50 dark:group-active:text-zinc-50" />
             </Button>
           </div>
         </div>

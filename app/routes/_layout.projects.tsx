@@ -1,4 +1,4 @@
-import { Link as LinkIcon } from "lucide-react";
+import { LinkIcon } from "~/assets/icons";
 import { SimpleLayout } from "~/components/simple-layout";
 import { generateMetaTags } from "~/utils/meta-tags";
 import type { HeadersFunction, MetaFunction } from "@vercel/remix";

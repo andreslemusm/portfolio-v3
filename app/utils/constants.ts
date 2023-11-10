@@ -1,30 +1,30 @@
 import {
-  SiGithub,
-  SiInstagram,
-  SiLinkedin,
-  SiTwitter,
-} from "@icons-pack/react-simple-icons";
+  GithubIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  TwitterXIcon,
+} from "~/assets/icons";
 
 const socialNetworks = [
   {
     label: "Twitter",
     href: "https://twitter.com/andreslemusm1",
-    icon: SiTwitter,
+    icon: TwitterXIcon,
   },
   {
     label: "Instagram",
     href: "https://instagram.com/andreslemusm",
-    icon: SiInstagram,
+    icon: InstagramIcon,
   },
   {
     label: "GitHub",
     href: "https://github.com/andreslemusm",
-    icon: SiGithub,
+    icon: GithubIcon,
   },
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/andreslemusm",
-    icon: SiLinkedin,
+    icon: LinkedinIcon,
   },
 ];
 

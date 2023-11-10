@@ -1,5 +1,5 @@
 import { Container } from "~/components/container";
-import { Mail } from "lucide-react";
+import { MailIcon } from "~/assets/icons";
 import { generateMetaTags } from "~/utils/meta-tags";
 import { portraitPicture } from "~/assets";
 import type { HeadersFunction, MetaFunction } from "@vercel/remix";
@@ -131,7 +131,7 @@ const About = (): React.ReactElement => (
             target="_blank"
             rel="noreferrer"
           >
-            <Mail className="h-5 w-5 flex-none text-zinc-500 transition group-hover:text-teal-500" />
+            <MailIcon className="h-5 w-5 flex-none text-zinc-500 transition group-hover:text-teal-500" />
             <span className="ml-4">{mail}</span>
           </a>
         </li>
