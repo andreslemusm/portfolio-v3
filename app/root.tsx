@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import type { LinksFunction } from "@vercel/remix";
 import styles from "./tailwind.css";
 import {
@@ -44,6 +45,7 @@ const App = (): React.ReactElement => (
       <ScrollRestoration />
       <Scripts />
       <LiveReload />
+      <Analytics />
     </body>
   </html>
 );

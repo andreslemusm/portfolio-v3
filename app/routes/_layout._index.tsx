@@ -1,6 +1,7 @@
 import { Button } from "~/components/button";
 import { Container } from "~/components/container";
 import { Fragment } from "react";
+import { cacheHeader } from "pretty-cache-header";
 import clsx from "clsx";
 import { generateMetaTags } from "~/utils/meta-tags";
 import { socialNetworks } from "~/utils/constants";
@@ -19,7 +20,11 @@ import {
 } from "~/assets";
 
 const headers: HeadersFunction = () => ({
-  "Cache-Control": "public, max-age=1, stale-while-revalidate=31536000",
+  "Cache-Control": cacheHeader({
+    public: true,
+    maxAge: "1m",
+    staleWhileRevalidate: "1month",
+  }),
 });
 
 const meta: MetaFunction = () =>

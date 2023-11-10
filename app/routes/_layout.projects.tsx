@@ -1,13 +1,17 @@
 import { LinkIcon } from "~/assets/icons";
 import { SimpleLayout } from "~/components/simple-layout";
+import { cacheHeader } from "pretty-cache-header";
 import { generateMetaTags } from "~/utils/meta-tags";
 import type { HeadersFunction, MetaFunction } from "@vercel/remix";
 import { OttomotoIcon, RMDBIcon, fithub } from "~/assets";
 
 const headers: HeadersFunction = () => ({
-  "Cache-Control": "public, max-age=1, stale-while-revalidate=31536000",
+  "Cache-Control": cacheHeader({
+    public: true,
+    maxAge: "1m",
+    staleWhileRevalidate: "1month",
+  }),
 });
-
 const meta: MetaFunction = () =>
   generateMetaTags({
     title: "Projects | Andres Lemus",

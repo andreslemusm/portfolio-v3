@@ -1,12 +1,17 @@
 import { Container } from "~/components/container";
 import { MailIcon } from "~/assets/icons";
+import { cacheHeader } from "pretty-cache-header";
 import { generateMetaTags } from "~/utils/meta-tags";
 import { portraitPicture } from "~/assets";
 import type { HeadersFunction, MetaFunction } from "@vercel/remix";
 import { mail, socialNetworks } from "~/utils/constants";
 
 const headers: HeadersFunction = () => ({
-  "Cache-Control": "public, max-age=1, stale-while-revalidate=31536000",
+  "Cache-Control": cacheHeader({
+    public: true,
+    maxAge: "1m",
+    staleWhileRevalidate: "1month",
+  }),
 });
 
 const meta: MetaFunction = () =>
