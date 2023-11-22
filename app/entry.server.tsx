@@ -8,6 +8,7 @@ const handleDocumentRequest: HandleDocumentRequestFunction = (
   responseHeaders,
   remixContext,
 ) => {
+  // @ts-expect-error -- will be fixed in a future release of Vercel Remix
   const remixServer = <RemixServer context={remixContext} url={request.url} />;
 
   return handleRequest(
