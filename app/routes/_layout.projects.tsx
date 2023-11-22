@@ -19,7 +19,7 @@ const meta: MetaFunction = () =>
       "I'm proud of the projects I've worked on and excited to share them with you.",
   });
 
-const Projects = (): React.ReactElement => (
+const Projects = () => (
   <SimpleLayout
     title="I'm proud of the projects I've worked on and excited to share them with you."
     intro="You'll find a selection of projects that showcase my skills and experience in front-end development. I've worked on various types of projects, including e-commerce sites, web applications, and online platforms."

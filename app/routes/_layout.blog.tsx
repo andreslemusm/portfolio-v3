@@ -17,9 +17,7 @@ const meta: MetaFunction = () =>
     description: "Read my thoughts on front-end development, design, and more.",
   });
 
-const Blog = (): React.ReactElement => (
-  <SimpleLayout title="Blog" intro="Coming Soon..." />
-);
+const Blog = () => <SimpleLayout title="Blog" intro="Coming Soon..." />;
 
 export { headers, meta };
 export default Blog;

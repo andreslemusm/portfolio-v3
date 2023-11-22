@@ -33,7 +33,7 @@ const links: LinksFunction = () => [
 
 const config = { runtime: "edge" };
 
-const App = (): React.ReactElement => (
+const App = () => (
   <html lang="en" className="h-full antialiased">
     <head>
       <script dangerouslySetInnerHTML={{ __html: modeScript }} />

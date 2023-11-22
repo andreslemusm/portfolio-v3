@@ -33,7 +33,7 @@ const meta: MetaFunction = () =>
     description: "Front-end Engineer",
   });
 
-const Home = (): React.ReactElement => (
+const Home = () => (
   <Fragment>
     <Container className="mt-9">
       <div className="max-w-2xl">

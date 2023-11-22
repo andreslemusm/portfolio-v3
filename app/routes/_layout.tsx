@@ -11,7 +11,7 @@ import { Fragment, useEffect, useRef } from "react";
 import { Link, NavLink, Outlet, useLocation } from "@remix-run/react";
 import { Popover, Transition } from "@headlessui/react";
 
-const Layout = (): React.ReactElement => {
+const Layout = () => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
 

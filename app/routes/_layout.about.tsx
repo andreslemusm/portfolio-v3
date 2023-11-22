@@ -21,7 +21,7 @@ const meta: MetaFunction = () =>
       "I'm a front-end engineer, with a passion for building things with React",
   });
 
-const About = (): React.ReactElement => (
+const About = () => (
   <Container className="mt-16 sm:mt-32">
     <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
       <div className="lg:pl-20">

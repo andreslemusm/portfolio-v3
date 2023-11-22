@@ -1,8 +1,4 @@
-export const OttomotoIcon = ({
-  className,
-}: {
-  className?: string;
-}): React.ReactElement => (
+export const OttomotoIcon = ({ className }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 102 40"

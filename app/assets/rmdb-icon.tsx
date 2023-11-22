@@ -1,8 +1,4 @@
-export const RMDBIcon = ({
-  className,
-}: {
-  className?: string;
-}): React.ReactElement => (
+export const RMDBIcon = ({ className }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
