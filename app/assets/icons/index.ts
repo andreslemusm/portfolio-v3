@@ -11,3 +11,6 @@ export * from "./twitter-x-icon";
 export * from "./x-icon";
 export * from "./mail-icon";
 export * from "./sun-icon";
+export * from "./ottomoto-icon";
+export * from "./react-icon";
+export * from "./rmdb-icon";

@@ -1,6 +1,6 @@
 import { clamp } from "~/utils/formatters";
 import clsx from "clsx";
-import { profilePicture } from "~/assets";
+import { profilePicture } from "~/assets/images";
 import { ChevronIcon, MoonIcon, SunIcon, XIcon } from "~/assets/icons";
 import {
   Container,

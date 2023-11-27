@@ -17,7 +17,7 @@ import {
   paris,
   seville,
   zipaquira,
-} from "~/assets";
+} from "~/assets/images";
 
 const headers: HeadersFunction = () => ({
   "Cache-Control": cacheHeader({

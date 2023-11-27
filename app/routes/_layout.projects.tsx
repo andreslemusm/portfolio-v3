@@ -1,9 +1,9 @@
-import { LinkIcon } from "~/assets/icons";
 import { SimpleLayout } from "~/components/simple-layout";
 import { cacheHeader } from "pretty-cache-header";
+import { fithub } from "~/assets/images";
 import { generateMetaTags } from "~/utils/meta-tags";
 import type { HeadersFunction, MetaFunction } from "@vercel/remix";
-import { OttomotoIcon, RMDBIcon, fithub } from "~/assets";
+import { LinkIcon, OttomotoIcon, RMDBIcon } from "~/assets/icons";
 
 const headers: HeadersFunction = () => ({
   "Cache-Control": cacheHeader({

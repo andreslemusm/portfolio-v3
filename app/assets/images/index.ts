@@ -1,7 +1,3 @@
-export * from "./brand-icon";
-export * from "./react-icon";
-export * from "./rmdb-icon";
-export * from "./ottomoto-icon";
 export { default as profilePicture } from "./profile-picture.webp";
 export { default as portraitPicture } from "./portrait-picture.webp";
 export { default as fluidAttacks } from "./fluid-attacks.svg";
