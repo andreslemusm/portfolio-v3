@@ -14,7 +14,7 @@ const headers: HeadersFunction = () => ({
 });
 const meta: MetaFunction = () =>
   generateMetaTags({
-    title: "Projects | Andres Lemus",
+    title: "Projects - Andres Lemus Madrid",
     description:
       "I'm proud of the projects I've worked on and excited to share them with you.",
   });

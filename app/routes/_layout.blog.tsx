@@ -13,7 +13,7 @@ const headers: HeadersFunction = () => ({
 
 const meta: MetaFunction = () =>
   generateMetaTags({
-    title: "Blog | Andres Lemus",
+    title: "Blog - Andres Lemus Madrid",
     description: "Read my thoughts on front-end development, design, and more.",
   });
 
