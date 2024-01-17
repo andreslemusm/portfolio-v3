@@ -147,7 +147,7 @@ const Home = () => (
             </ol>
             <Button
               as="anchor"
-              href="/cv.pdf"
+              href="/resume.pdf"
               variant="secondary"
               className="group mt-6 w-full"
               download
