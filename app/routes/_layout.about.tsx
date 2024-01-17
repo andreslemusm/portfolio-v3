@@ -18,7 +18,7 @@ const meta: MetaFunction = () =>
   generateMetaTags({
     title: "About - Andres Lemus Madrid",
     description:
-      "I'm a front-end engineer, with a passion for building things with React",
+      "I'm a frontend engineer, with a passion for building things with React",
   });
 
 const About = () => (
@@ -36,7 +36,7 @@ const About = () => (
       </div>
       <div className="lg:order-first lg:row-span-2">
         <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-          I&apos;m a front-end engineer, with a passion for building things with{" "}
+          I&apos;m a frontend engineer, with a passion for building things with{" "}
           <span
             style={{ color: "#61dafb" }}
             className="inline-flex items-center gap-x-2"
@@ -74,7 +74,7 @@ const About = () => (
             has helped me in my career.
           </p>
           <p>
-            I soon realized that front-end development was where my true passion
+            I soon realized that frontend development was where my true passion
             lay, so I decided to focus on learning everything related to this
             field. I used a{" "}
             <a
@@ -107,7 +107,7 @@ const About = () => (
             Overall, I&apos;m passionate about building intuitive and
             user-friendly interfaces, and I love using my skills to help
             businesses achieve their goals. If you&apos;re looking for a
-            front-end engineer who&apos;s dedicated, hardworking, and always
+            frontend engineer who&apos;s dedicated, hardworking, and always
             looking to improve,{" "}
             <strong className="font-medium text-zinc-800 dark:text-zinc-200">
               let&apos;s chat!

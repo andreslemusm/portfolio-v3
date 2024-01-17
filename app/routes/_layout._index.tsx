@@ -9,13 +9,13 @@ import { BriefcaseIcon, DownloadCloudIcon } from "~/assets/icons/";
 import type { HeadersFunction, MetaFunction } from "@vercel/remix";
 import {
   barcelona,
-  carrierAssure,
   cartagena,
   fithub,
   fluidAttacks,
-  leanGroup,
+  leanTech,
   paris,
   seville,
+  sublime,
   zipaquira,
 } from "~/assets/images";
 
@@ -38,21 +38,21 @@ const Home = () => (
     <Container className="mt-9">
       <div className="max-w-2xl">
         <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-          Front-end engineer, and amateur traveler.
+          Frontend engineer
         </h1>
         <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          I&apos;m Andres, a front-end engineer based in Medellin 🇨🇴. I&apos;m
-          the lead front-end engineer of{" "}
+          I&apos;m Andres, a frontend engineer based in Medellin 🇨🇴. I&apos;m
+          the lead frontend engineer of{" "}
           <a
-            href="https://www.carrierassure.com/"
+            href="https://sublime.app/"
             className="font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400"
             target="_blank"
             rel="noreferrer"
           >
-            Carrier Assure
+            Sublime
           </a>
-          , where we develop technologies that empower companies or individuals
-          to predict how a carrier will transport its goods.
+          , where we&apos;re on a quest to build the perfect tool to collect and
+          connect anything interesting you come across.
         </p>
         <div className="mt-6 flex gap-6">
           {socialNetworks.map((socialNetwork) => (
@@ -164,28 +164,25 @@ const Home = () => (
 
 const resume = [
   {
-    company: "Carrier Assure (LSG Client)",
-    title: "Lead Front-end Engineer",
-    logo: carrierAssure,
-    start: "Nov 2021",
+    company: "Sublime",
+    title: "Senior Frontend Engineer",
+    logo: sublime,
+    start: "Apr 2023",
     end: {
       label: "Present",
       dateTime: new Date().getFullYear(),
     },
   },
   {
-    company: "Lean Solutions Group",
-    title: "Lead Front-end Engineer",
-    logo: leanGroup,
+    company: "Lean Tech",
+    title: "Lead Frontend Engineer",
+    logo: leanTech,
     start: "Feb 2021",
-    end: {
-      label: "Present",
-      dateTime: new Date().getFullYear(),
-    },
+    end: "Mar 2023",
   },
   {
     company: "FitHub",
-    title: "Front-end Engineer",
+    title: "Frontend Engineer",
     logo: fithub,
     start: "Sep 2020",
     end: "Jan 2021",

@@ -22,7 +22,7 @@ const meta: MetaFunction = () =>
 const Projects = () => (
   <SimpleLayout
     title="I'm proud of the projects I've worked on and excited to share them with you."
-    intro="You'll find a selection of projects that showcase my skills and experience in front-end development. I've worked on various types of projects, including e-commerce sites, web applications, and online platforms."
+    intro="You'll find a selection of projects that showcase my skills and experience in frontend development. I've worked on various types of projects, including e-commerce sites, web applications, and online platforms."
   >
     <ul className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
       {[
