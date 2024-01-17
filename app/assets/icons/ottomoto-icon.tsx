@@ -1,10 +1,10 @@
-export const OttomotoIcon = ({ className }: { className?: string }) => (
+export const OttomotoIcon = (props: React.ComponentPropsWithoutRef<"svg">) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 102 40"
     width={102}
     height={40}
-    className={className}
+    {...props}
   >
     <path
       fill="#262737"

@@ -1,9 +1,9 @@
 import { SimpleLayout } from "~/components/simple-layout";
 import { cacheHeader } from "pretty-cache-header";
-import { fithub } from "~/assets/images";
 import { generateMetaTags } from "~/utils/meta-tags";
 import type { HeadersFunction, MetaFunction } from "@vercel/remix";
 import { LinkIcon, OttomotoIcon, RMDBIcon } from "~/assets/icons";
+import { carrierAssure, fithub, sublime } from "~/assets/images";
 
 const headers: HeadersFunction = () => ({
   "Cache-Control": cacheHeader({
@@ -12,6 +12,7 @@ const headers: HeadersFunction = () => ({
     staleWhileRevalidate: "1month",
   }),
 });
+
 const meta: MetaFunction = () =>
   generateMetaTags({
     title: "Projects - Andres Lemus Madrid",
@@ -25,38 +26,7 @@ const Projects = () => (
     intro="You'll find a selection of projects that showcase my skills and experience in frontend development. I've worked on various types of projects, including e-commerce sites, web applications, and online platforms."
   >
     <ul className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
-      {[
-        {
-          name: "Ottomoto",
-          description:
-            "Platform to make the car buying and selling process easier and transparent.",
-          link: {
-            href: "https://ottomoto.net",
-            label: "ottomoto.net",
-          },
-          logo: <OttomotoIcon className="relative z-10 h-12 w-24 shrink-0" />,
-        },
-        {
-          name: "FitHub",
-          description: "The one-stop shop for healthy products.",
-          link: {
-            href: "https://fithub.com.co",
-            label: "fithub.com.co",
-          },
-          logo: (
-            <img src={fithub} className="relative z-10 h-12 w-auto" alt="" />
-          ),
-        },
-        {
-          name: "RMDB",
-          description: "Platform to browse and discover movies.",
-          link: {
-            href: "https://rmdb.andreslemusm.com",
-            label: "rmdb.andreslemusm.com",
-          },
-          logo: <RMDBIcon className="relative z-10 h-12 w-auto shrink-0" />,
-        },
-      ].map((project) => (
+      {projects.map((project) => (
         <li
           className="group relative flex flex-col items-start"
           key={project.name}
@@ -81,6 +51,86 @@ const Projects = () => (
     </ul>
   </SimpleLayout>
 );
+
+const projects = [
+  {
+    name: "Sublime",
+    description: "Experience a calmer, more human Internet.",
+    link: {
+      href: "https://sublime.app",
+      label: "sublime.app",
+    },
+    logo: (
+      <img
+        src={sublime}
+        className="relative z-10 -ml-1.5 h-12 w-12 shrink-0"
+        alt="Abstract S"
+      />
+    ),
+  },
+  {
+    name: "Carrier Assure",
+    description:
+      "The first carrier performance scoring software that analyzes data to help find the best carrier for you.",
+    link: {
+      href: "https://carrierassure.com",
+      label: "carrierassure.com",
+    },
+    logo: (
+      <img
+        src={carrierAssure}
+        className="relative z-10 -ml-1 h-12 w-12 shrink-0"
+        alt="Blue circle with a white CA in the middle"
+      />
+    ),
+  },
+  {
+    name: "Ottomoto",
+    description:
+      "Streamline automotive financing processes. Gives dealers access to more lenders and closes deals faster.",
+    link: {
+      href: "https://ottomoto.net",
+      label: "ottomoto.net",
+    },
+    logo: (
+      <OttomotoIcon
+        role="img"
+        aria-label="Navy O, orange M, and a trademark symbol"
+        className="relative z-10 h-12 w-24 shrink-0"
+      />
+    ),
+  },
+  {
+    name: "FitHub",
+    description: "The one-stop shop for healthy products.",
+    link: {
+      href: "https://fithub.com.co",
+      label: "fithub.com.co",
+    },
+    logo: (
+      <img
+        src={fithub}
+        className="relative z-10 -ml-1.5 h-12 w-auto shrink-0"
+        alt="Orange map marker"
+      />
+    ),
+  },
+  {
+    name: "RMDB",
+    description: "Browse and discover movies.",
+    link: {
+      href: "https://rmdb.andreslemusm.com",
+      label: "rmdb.andreslemusm.com",
+    },
+    logo: (
+      <RMDBIcon
+        role="img"
+        aria-label="Black square with a white RMDB in the middle"
+        className="relative z-10 h-12 w-auto shrink-0"
+      />
+    ),
+  },
+];
 
 export { headers, meta };
 export default Projects;

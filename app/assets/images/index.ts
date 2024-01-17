@@ -2,7 +2,7 @@ export { default as profilePicture } from "./profile-picture.webp";
 export { default as portraitPicture } from "./portrait-picture.webp";
 export { default as fluidAttacks } from "./fluid-attacks.svg";
 export { default as fithub } from "./fithub.webp";
-export { default as carrierAssure } from "./carrier-assure.webp";
+export { default as carrierAssure } from "./carrier-assure.svg";
 export { default as cartagena } from "./cartagena.webp";
 export { default as barcelona } from "./barcelona.webp";
 export { default as paris } from "./paris.webp";

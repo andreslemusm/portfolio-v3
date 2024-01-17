@@ -1,11 +1,11 @@
-export const RMDBIcon = ({ className }: { className?: string }) => (
+export const RMDBIcon = (props: React.ComponentPropsWithoutRef<"svg">) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 230 230"
     width={230}
     height={230}
-    className={className}
+    {...props}
   >
     <rect width="230" height="230" fill="#262626" rx="24" />
     <path
