@@ -19,7 +19,7 @@ export const generateMetaTags = ({
     },
     // Open Graph / Facebook
     { property: "og:type", content: "website" },
-    { property: "og:url", content: "https://rmdb.andreslemusm.com/" },
+    { property: "og:url", content: "https://andreslemusm.com/" },
     { property: "og:title", content: title },
     {
       property: "og:description",
@@ -27,11 +27,11 @@ export const generateMetaTags = ({
     },
     {
       property: "og:image",
-      content: "https://rmdb.andreslemusm.com/preview.png",
+      content: "https://andreslemusm.com/preview.png",
     },
     // Twitter
     { property: "twitter:card", content: "summary_large_image" },
-    { property: "twitter:url", content: "https://rmdb.andreslemusm.com/" },
+    { property: "twitter:url", content: "https://andreslemusm.com/" },
     { property: "twitter:title", content: title },
     {
       property: "twitter:description",
@@ -39,7 +39,7 @@ export const generateMetaTags = ({
     },
     {
       property: "twitter:image",
-      content: "https://rmdb.andreslemusm.com/preview.png",
+      content: "https://andreslemusm.com/preview.png",
     },
     // Favicons
     {
