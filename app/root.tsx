@@ -1,3 +1,7 @@
+/* eslint-disable import/group-exports
+  --
+  Vercel's config requires to be exported on its own, so we can't group all the exports together.
+*/
 import { Analytics } from "@vercel/analytics/react";
 import type { LinksFunction } from "@vercel/remix";
 import styles from "./tailwind.css?url";
@@ -8,8 +12,6 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-
-const config = { runtime: "edge" };
 
 const links: LinksFunction = () => [
   // Favicons
@@ -85,5 +87,7 @@ const modeScript = `
 
 const App = () => <Outlet />;
 
-export { Layout, links, config };
+export const config = { runtime: "edge" };
+
+export { Layout, links };
 export default App;
