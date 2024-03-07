@@ -1,14 +1,15 @@
 import { Analytics } from "@vercel/analytics/react";
 import type { LinksFunction } from "@vercel/remix";
-import styles from "./tailwind.css";
+import styles from "./tailwind.css?url";
 import {
   Links,
-  LiveReload,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+
+const config = { runtime: "edge" };
 
 const links: LinksFunction = () => [
   // Favicons
@@ -31,9 +32,7 @@ const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
 ];
 
-const config = { runtime: "edge" };
-
-const App = () => (
+const Layout = ({ children }: React.PropsWithChildren) => (
   <html lang="en" className="h-full antialiased">
     <head>
       <script dangerouslySetInnerHTML={{ __html: modeScript }} />
@@ -41,10 +40,9 @@ const App = () => (
       <Links />
     </head>
     <body className="flex h-full flex-col bg-zinc-50 dark:bg-black">
-      <Outlet />
+      {children}
       <ScrollRestoration />
       <Scripts />
-      <LiveReload />
       <Analytics />
     </body>
   </html>
@@ -85,5 +83,7 @@ const modeScript = `
   }
 `;
 
-export { links, config };
+const App = () => <Outlet />;
+
+export { Layout, links, config };
 export default App;

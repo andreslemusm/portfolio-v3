@@ -1,10 +1,12 @@
 {
-  "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx"],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2022"],
+    "types": ["@vercel/remix", "node", "vite/client"],
     "isolatedModules": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",
+    "module": "ESNext",
     "moduleResolution": "Bundler",
     "resolveJsonModule": true,
     "target": "ES2022",
@@ -15,11 +17,9 @@
     "paths": {
       "~/*": ["./app/*"]
     },
-    // Remix takes care of building everything in `remix build`.
+    // Vite takes care of building everything, not tsc.
     "noEmit": true,
     // We don't need to type check the node_modules.
-    "skipLibCheck": true,
-    // To support dynamic imports.
-    "module": "ES2022"
+    "skipLibCheck": true
   }
 }
