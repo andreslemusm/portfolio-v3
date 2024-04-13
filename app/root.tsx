@@ -4,6 +4,7 @@
 */
 import { Analytics } from "@vercel/analytics/react";
 import type { LinksFunction } from "@vercel/remix";
+import { SpeedInsights } from "@vercel/speed-insights/remix";
 import styles from "./tailwind.css?url";
 import {
   Links,
@@ -45,6 +46,7 @@ const Layout = ({ children }: React.PropsWithChildren) => (
       {children}
       <ScrollRestoration />
       <Scripts />
+      <SpeedInsights />
       <Analytics />
     </body>
   </html>
