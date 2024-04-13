@@ -1,40 +1,22 @@
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
-  env: { node: true, es6: true },
-  extends: [
-    "eslint:recommended",
-    "@remix-run/eslint-config",
-    "@remix-run/eslint-config/node",
-    "prettier",
-  ],
   root: true,
+  env: { node: true, es2023: true },
+  parserOptions: {
+    sourceType: "module",
+  },
+  extends: ["eslint:recommended", "prettier"],
   overrides: [
     {
       files: ["*.ts", "*.tsx"],
       env: {
-        browser: true,
-        es2021: true,
+        "shared-node-browser": true,
       },
-      extends: [
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "plugin:react/jsx-runtime",
-        "plugin:jsx-a11y/strict",
-        "plugin:import/typescript",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/recommended-requiring-type-checking",
-        "plugin:functional/strict",
-        "plugin:testing-library/react",
-        "plugin:jest-dom/recommended",
-        "prettier",
-      ],
       parser: "@typescript-eslint/parser",
       parserOptions: {
         ecmaFeatures: {
           jsx: true,
         },
-        ecmaVersion: 2022,
-        sourceType: "module",
         tsconfigRootDir: __dirname,
         project: ["./tsconfig.json"],
       },
@@ -49,6 +31,19 @@ module.exports = {
         "functional",
         "testing-library",
         "jest-dom",
+      ],
+      extends: [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:react/jsx-runtime",
+        "plugin:jsx-a11y/strict",
+        "plugin:import/typescript",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:functional/strict",
+        "plugin:testing-library/react",
+        "plugin:jest-dom/recommended",
+        "prettier",
       ],
       rules: {
         "line-comment-position": ["error", "above"],
@@ -76,6 +71,10 @@ module.exports = {
               {
                 group: ["@remix-run/node"],
                 message: "Please use '@vercel/remix' instead",
+              },
+              {
+                group: ["valibot"],
+                message: "Please use '~/utils/validations' instead",
               },
             ],
           },

@@ -1,8 +1,8 @@
 {
   "include": ["**/*.ts", "**/*.tsx"],
   "compilerOptions": {
-    "lib": ["DOM", "DOM.Iterable", "ES2022"],
-    "types": ["@vercel/remix", "node", "vite/client"],
+    "lib": ["DOM", "DOM.Iterable", "ES2023"],
+    "types": ["@vercel/remix", "node", "vite/client", "./types/reset.d.ts"],
     "isolatedModules": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",
