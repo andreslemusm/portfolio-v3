@@ -2,22 +2,11 @@ import { Button } from "~/components/button";
 import { Container } from "~/components/container";
 import { Fragment } from "react";
 import { cacheHeader } from "pretty-cache-header";
-import clsx from "clsx";
 import { generateMetaTags } from "~/utils/meta-tags";
 import { socialNetworks } from "~/utils/constants";
 import { BriefcaseIcon, DownloadCloudIcon } from "~/assets/icons/";
 import type { HeadersFunction, MetaFunction } from "react-router";
-import {
-  barcelona,
-  cartagena,
-  fithub,
-  fluidAttacks,
-  leanTech,
-  paris,
-  seville,
-  sublime,
-  zipaquira,
-} from "~/assets/images";
+import { fithub, fluidAttacks, leanTech, sublime } from "~/assets/images";
 
 const headers: HeadersFunction = () => ({
   "Cache-Control": cacheHeader({
@@ -70,35 +59,9 @@ const Home = () => (
         </div>
       </div>
     </Container>
-    <div className="mt-16 sm:mt-20">
-      <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[zipaquira, seville, cartagena, paris, barcelona].map(
-          (image, imageIndex) => (
-            <div
-              key={image}
-              className={clsx(
-                "relative aspect-9/10 w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800",
-                rotations[imageIndex % rotations.length],
-              )}
-            >
-              <img
-                src={image}
-                alt="Travel photography showcasing various destinations"
-                sizes="(min-width: 640px) 18rem, 11rem"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-            </div>
-          ),
-        )}
-      </div>
-    </div>
     <Container className="mt-24 md:mt-28">
       <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-        <div className="flex flex-col gap-16">
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Stay tuned for updates about my projects and experiences...
-          </p>
-        </div>
+        <div />
         <div className="space-y-10 lg:pl-16 xl:pl-24">
           <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
             <h2 className="flex items-center text-sm font-semibold text-zinc-900 dark:text-zinc-100">
@@ -198,14 +161,6 @@ const resume = [
     start: "May 2019",
     end: "Aug 2020",
   },
-];
-
-const rotations = [
-  "rotate-2",
-  "-rotate-2",
-  "rotate-2",
-  "rotate-2",
-  "-rotate-2",
 ];
 
 export { meta, headers };
