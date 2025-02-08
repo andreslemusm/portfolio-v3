@@ -14,10 +14,16 @@ const headers: HeadersFunction = () => ({
 const meta: MetaFunction = () =>
   generateMetaTags({
     title: "Blog - Andres Lemus Madrid",
-    description: "Read my thoughts on frontend development, design, and more.",
+    description:
+      "Insights and reflections on frontend development, modern web technologies, and building exceptional user experiences.",
   });
 
-const Blog = () => <SimpleLayout title="Blog" intro="Coming Soon..." />;
+const Blog = () => (
+  <SimpleLayout
+    title="Thoughts on Frontend Development and Beyond"
+    intro="A collection of articles sharing my experiences, learnings, and perspectives on building better web applications. Stay tuned for upcoming posts!"
+  />
+);
 
 export { headers, meta };
 export default Blog;

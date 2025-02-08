@@ -18,7 +18,7 @@ const meta: MetaFunction = () =>
   generateMetaTags({
     title: "About - Andres Lemus Madrid",
     description:
-      "I'm a frontend engineer, with a passion for building things with React",
+      "I'm a frontend engineer passionate about building exceptional web experiences",
   });
 
 const About = () => (
@@ -36,82 +36,63 @@ const About = () => (
       </div>
       <div className="lg:order-first lg:row-span-2">
         <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-          I&apos;m a frontend engineer, with a passion for building things with{" "}
-          <span
-            style={{ color: "#61dafb" }}
-            className="inline-flex items-center gap-x-2"
-          >
-            React{" "}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="-11.5 -10.23174 23 20.46348"
-              width="24"
-              height="24"
-              className="h-9 w-9"
-            >
-              <circle cx="0" cy="0" r="2.05" fill="#61dafb"></circle>
-              <g stroke="#61dafb" strokeWidth="1" fill="none">
-                <ellipse rx="11" ry="4.2"></ellipse>
-                <ellipse rx="11" ry="4.2" transform="rotate(60)"></ellipse>
-                <ellipse rx="11" ry="4.2" transform="rotate(120)"></ellipse>
-              </g>
-            </svg>
-          </span>
-          .
+          I&apos;m a frontend engineer passionate about crafting exceptional web
+          experiences.
         </h1>
         <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
           <p>
-            I started my journey into the world of tech at the{" "}
+            My tech journey began at the{" "}
             <a
               href="https://unal.edu.co/"
               className="font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400"
             >
               National University of Colombia
             </a>
-            , where I studied Systems Engineering with an emphasis in
-            Networking. While I didn&apos;t complete my degree, I gained
-            valuable knowledge in OOP, FP, data structures, and compilers, which
-            has helped me in my career.
+            , where I studied Systems Engineering with a focus on networking.
+            Though I didn&apos;t complete my degree, the strong foundation in
+            object-oriented programming, functional programming, data
+            structures, and compiler theory has proven invaluable throughout my
+            career.
           </p>
           <p>
-            I soon realized that frontend development was where my true passion
-            lay, so I decided to focus on learning everything related to this
-            field. I used a{" "}
+            Discovering my passion for frontend development, I committed myself
+            to mastering the craft. Using a structured{" "}
             <a
               href="https://roadmap.sh/frontend"
               className="font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400"
             >
-              roadmap
-            </a>{" "}
-            to track the topics I needed to learn, and after almost three months
-            of hard work, I became proficient in everything from HTML to
-            ReactJS. In May 2019, I landed my first job as a software engineer
-            at Fluid Attacks.
+              learning path
+            </a>
+            , I immersed myself in web technologies. After three months of
+            dedicated study and practice, I secured my first role as a software
+            engineer at Fluid Attacks in May 2019.
           </p>
           <p>
-            Like many people, I encountered challenges along the way. Some
-            things didn&apos;t click immediately, and sometimes I forgot
-            something I had learned a week before. There were also times when
-            the topics were simply too difficult to wrap my head around. If
-            you&apos;re going through the same thing, I highly recommend this{" "}
+            The learning journey wasn&apos;t always smooth - concepts sometimes
+            proved elusive, and retention could be challenging. For others
+            facing similar hurdles, I highly recommend this{" "}
             <a
               href="https://www.coursera.org/learn/learning-how-to-learn"
               className="font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400"
             >
-              course
-            </a>{" "}
-            that gave me powerful tools to improve my learning ability. And the
-            best thing? It&apos;s freemium, so you can start learning today!
+              learning techniques course
+            </a>
+            . It provided me with invaluable strategies to enhance my learning
+            process. Best of all, you can access the core content for free!
           </p>
           <p>
-            Overall, I&apos;m passionate about building intuitive and
-            user-friendly interfaces, and I love using my skills to help
-            businesses achieve their goals. If you&apos;re looking for a
-            frontend engineer who&apos;s dedicated, hardworking, and always
-            looking to improve,{" "}
-            <strong className="font-medium text-zinc-800 dark:text-zinc-200">
-              let&apos;s chat!
-            </strong>
+            Today, I specialize in creating intuitive, performant user
+            interfaces that help businesses achieve their goals. My approach
+            combines technical expertise with a deep understanding of user
+            experience principles. If you&apos;re looking for a frontend
+            engineer who brings both technical skill and user-focused thinking
+            to your projects,{" "}
+            <a
+              href={`mailto:${mail}`}
+              className="font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400"
+            >
+              I&apos;d love to connect!
+            </a>
           </p>
         </div>
       </div>

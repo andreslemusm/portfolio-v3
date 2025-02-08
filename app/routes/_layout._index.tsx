@@ -38,11 +38,11 @@ const Home = () => (
     <Container className="mt-9">
       <div className="max-w-2xl">
         <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-          Frontend engineer
+          Frontend Engineer
         </h1>
         <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          I&apos;m Andres, a frontend engineer based in Medellin 🇨🇴. I&apos;m
-          the lead frontend engineer of{" "}
+          Hi, I&apos;m Andres, a frontend engineer based in Medellín, Colombia.
+          Currently, I&apos;m leading frontend development at{" "}
           <a
             href="https://sublime.app/"
             className="font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400"
@@ -51,8 +51,8 @@ const Home = () => (
           >
             Sublime
           </a>
-          , where we&apos;re on a quest to build the perfect tool to collect and
-          connect anything interesting you come across.
+          , where we&apos;re building an innovative platform for collecting and
+          connecting digital content in meaningful ways.
         </p>
         <div className="mt-6 flex gap-6">
           {socialNetworks.map((socialNetwork) => (
@@ -83,7 +83,7 @@ const Home = () => (
             >
               <img
                 src={image}
-                alt=""
+                alt="Travel photography showcasing various destinations"
                 sizes="(min-width: 640px) 18rem, 11rem"
                 className="absolute inset-0 h-full w-full object-cover"
               />
@@ -96,20 +96,24 @@ const Home = () => (
       <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
         <div className="flex flex-col gap-16">
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            More coming soon...
+            Stay tuned for updates about my projects and experiences...
           </p>
         </div>
         <div className="space-y-10 lg:pl-16 xl:pl-24">
           <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
             <h2 className="flex items-center text-sm font-semibold text-zinc-900 dark:text-zinc-100">
               <BriefcaseIcon className="h-5 w-5 flex-none" />
-              <span className="ml-4">Work</span>
+              <span className="ml-4">Professional Experience</span>
             </h2>
             <ol className="mt-6 space-y-4">
               {resume.map((role) => (
                 <li key={role.company} className="flex gap-4">
                   <div className="mt-1 grid h-10 w-10 flex-none place-items-center rounded-full ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-                    <img src={role.logo} alt="" className="h-7 w-7" />
+                    <img
+                      src={role.logo}
+                      alt={`${role.company} logo`}
+                      className="h-7 w-7"
+                    />
                   </div>
                   <dl className="flex flex-auto flex-wrap gap-x-2">
                     <dt className="sr-only">Company</dt>
@@ -152,7 +156,7 @@ const Home = () => (
               className="group mt-6 w-full"
               download
             >
-              Download CV
+              Download Resume
               <DownloadCloudIcon className="h-4 w-4 text-zinc-400 transition group-hover:text-zinc-600 group-active:text-zinc-600 dark:group-hover:text-zinc-50 dark:group-active:text-zinc-50" />
             </Button>
           </div>

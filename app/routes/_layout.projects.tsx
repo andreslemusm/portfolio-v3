@@ -17,13 +17,13 @@ const meta: MetaFunction = () =>
   generateMetaTags({
     title: "Projects - Andres Lemus Madrid",
     description:
-      "I'm proud of the projects I've worked on and excited to share them with you.",
+      "A showcase of my most impactful projects in frontend development.",
   });
 
 const Projects = () => (
   <SimpleLayout
-    title="I'm proud of the projects I've worked on and excited to share them with you."
-    intro="You'll find a selection of projects that showcase my skills and experience in frontend development. I've worked on various types of projects, including e-commerce sites, web applications, and online platforms."
+    title="A showcase of my most impactful projects in frontend development."
+    intro="Each project represents a unique challenge that I've tackled, demonstrating my expertise in creating intuitive user interfaces, optimizing performance, and delivering exceptional user experiences across various domains."
   >
     <ul className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
       {projects.map((project) => (
@@ -55,7 +55,8 @@ const Projects = () => (
 const projects = [
   {
     name: "Sublime",
-    description: "Experience a calmer, more human Internet.",
+    description:
+      "A revolutionary platform reimagining how we interact with digital content, designed to create a more focused and meaningful online experience.",
     link: {
       href: "https://sublime.app",
       label: "sublime.app",
@@ -71,7 +72,7 @@ const projects = [
   {
     name: "Carrier Assure",
     description:
-      "The first carrier performance scoring software that analyzes data to help find the best carrier for you.",
+      "An innovative carrier performance scoring platform that leverages data analytics to optimize logistics partnerships and streamline carrier selection.",
     link: {
       href: "https://carrierassure.com",
       label: "carrierassure.com",
@@ -87,7 +88,7 @@ const projects = [
   {
     name: "Ottomoto",
     description:
-      "Streamline automotive financing processes. Gives dealers access to more lenders and closes deals faster.",
+      "A comprehensive automotive financing platform that revolutionizes dealership operations by expanding lender networks and accelerating deal closures.",
     link: {
       href: "https://ottomoto.net",
       label: "ottomoto.net",
@@ -102,7 +103,8 @@ const projects = [
   },
   {
     name: "FitHub",
-    description: "The one-stop shop for healthy products.",
+    description:
+      "A curated marketplace connecting health enthusiasts with premium wellness products and nutritional supplements.",
     link: {
       href: "https://fithub.com.co",
       label: "fithub.com.co",
@@ -117,7 +119,8 @@ const projects = [
   },
   {
     name: "RMDB",
-    description: "Browse and discover movies.",
+    description:
+      "An intuitive movie discovery platform featuring comprehensive film information and personalized recommendations.",
     link: {
       href: "https://rmdb.andreslemusm.com",
       label: "rmdb.andreslemusm.com",
