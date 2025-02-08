@@ -37,7 +37,7 @@ const Home = () => (
   <Fragment>
     <Container className="mt-9">
       <div className="max-w-2xl">
-        <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+        <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
           Frontend engineer
         </h1>
         <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
@@ -77,7 +77,7 @@ const Home = () => (
             <div
               key={image}
               className={clsx(
-                "relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl",
+                "relative aspect-9/10 w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800",
                 rotations[imageIndex % rotations.length],
               )}
             >
@@ -108,7 +108,7 @@ const Home = () => (
             <ol className="mt-6 space-y-4">
               {resume.map((role) => (
                 <li key={role.company} className="flex gap-4">
-                  <div className="mt-1 grid h-10 w-10 flex-none place-items-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                  <div className="mt-1 grid h-10 w-10 flex-none place-items-center rounded-full ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                     <img src={role.logo} alt="" className="h-7 w-7" />
                   </div>
                   <dl className="flex flex-auto flex-wrap gap-x-2">

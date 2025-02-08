@@ -137,7 +137,7 @@ const Layout = () => {
             <Fragment>
               <div
                 ref={avatarRef}
-                className="order-last mt-[calc(theme(spacing.16)-theme(spacing.3))]"
+                className="order-last mt-[calc(--spacing(16)-(--spacing(3)))]"
               />
               <Container
                 className="top-0 order-last -mb-3 pt-3"
@@ -147,7 +147,7 @@ const Layout = () => {
                 }}
               >
                 <div
-                  className="top-[var(--avatar-top,theme(spacing.3))] w-full"
+                  className="top-(--avatar-top,--spacing(3)) w-full"
                   style={{
                     position:
                       "var(--header-inner-position)" as React.CSSProperties["position"],
@@ -155,7 +155,7 @@ const Layout = () => {
                 >
                   <div className="relative">
                     <div
-                      className="absolute left-0 top-3 h-10 w-10 origin-left rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition-opacity dark:bg-zinc-800/90 dark:ring-white/10"
+                      className="absolute top-3 left-0 h-10 w-10 origin-left rounded-full bg-white/90 p-0.5 ring-1 shadow-lg shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm transition-opacity dark:bg-zinc-800/90 dark:ring-white/10"
                       style={{
                         opacity: "var(--avatar-border-opacity, 0)",
                         transform: "var(--avatar-border-transform)",
@@ -180,7 +180,7 @@ const Layout = () => {
             }}
           >
             <Container
-              className="top-[var(--header-top,theme(spacing.6))] w-full"
+              className="top-(--header-top,--spacing(6)) w-full"
               style={{
                 position:
                   "var(--header-inner-position)" as React.CSSProperties["position"],
@@ -189,7 +189,7 @@ const Layout = () => {
               <div className="relative flex gap-4">
                 <div className="flex flex-1">
                   {!isHomePage ? (
-                    <div className="h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10">
+                    <div className="h-10 w-10 rounded-full bg-white/90 p-0.5 ring-1 shadow-lg shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm dark:bg-zinc-800/90 dark:ring-white/10">
                       <Avatar />
                     </div>
                   ) : null}
@@ -197,7 +197,7 @@ const Layout = () => {
                 <div className="flex flex-1 justify-end md:justify-center">
                   {/* Mobile Navigation */}
                   <Popover className="pointer-events-auto md:hidden">
-                    <Popover.Button className="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
+                    <Popover.Button className="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 ring-1 shadow-lg shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
                       Menu
                       <ChevronIcon className="ml-3 h-auto w-2 stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400" />
                     </Popover.Button>
@@ -211,7 +211,7 @@ const Layout = () => {
                         leaveFrom="opacity-100"
                         leaveTo="opacity-0"
                       >
-                        <Popover.Overlay className="fixed inset-0 z-30 bg-zinc-800/40 backdrop-blur-sm dark:bg-black/80" />
+                        <Popover.Overlay className="fixed inset-0 z-30 bg-zinc-800/40 backdrop-blur-xs dark:bg-black/80" />
                       </Transition.Child>
                       <Transition.Child
                         as={Fragment}
@@ -260,7 +260,7 @@ const Layout = () => {
                   {/* End Mobile Navigation */}
                   {/* DesktopNavigation */}
                   <nav className="pointer-events-auto hidden md:block">
-                    <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
+                    <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 ring-1 shadow-lg shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
                       {paths.map((path) => (
                         <li key={path}>
                           <NavLink
@@ -279,7 +279,7 @@ const Layout = () => {
                               <Fragment>
                                 {path}
                                 {isActive ? (
-                                  <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0" />
+                                  <span className="absolute inset-x-1 -bottom-px h-px bg-linear-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0" />
                                 ) : null}
                               </Fragment>
                             )}
@@ -295,15 +295,15 @@ const Layout = () => {
                     <button
                       type="button"
                       aria-label="Toggle dark mode"
-                      className="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
+                      className="group rounded-full bg-white/90 px-3 py-2 ring-1 shadow-lg shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
                       onClick={() => {
                         // Disable transitions temporarily
                         document.documentElement.classList.add(
-                          "[&_*]:!transition-none",
+                          "**:transition-none!",
                         );
                         window.setTimeout(() => {
                           document.documentElement.classList.remove(
-                            "[&_*]:!transition-none",
+                            "**:transition-none!",
                           );
                         }, 0);
 
@@ -343,7 +343,7 @@ const Layout = () => {
         {/* Footer */}
         <footer className="mt-32">
           <OuterContainer>
-            <div className="border-t border-zinc-100 pb-16 pt-10 dark:border-zinc-700/40">
+            <div className="border-t border-zinc-100 pt-10 pb-16 dark:border-zinc-700/40">
               <InnerContainer>
                 <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
                   <div className="flex gap-6 text-sm">
@@ -352,7 +352,7 @@ const Layout = () => {
                         key={path}
                         to={`/${path}`}
                         prefetch="intent"
-                        className="font-medium capitalize text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400"
+                        className="font-medium text-zinc-800 capitalize transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400"
                       >
                         {path}
                       </Link>
