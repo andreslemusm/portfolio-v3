@@ -1,11 +1,7 @@
 import { defineConfig } from "vite";
-// eslint-disable-next-line no-restricted-imports -- Only way to install node polyfills
-import { installGlobals } from "@remix-run/node";
 import { vitePlugin as remix } from "@remix-run/dev";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { vercelPreset } from "@vercel/remix/vite";
-
-installGlobals();
 
 export default defineConfig({
   server: {
@@ -17,6 +13,10 @@ export default defineConfig({
         v3_fetcherPersist: true,
         v3_relativeSplatPath: true,
         v3_throwAbortReason: true,
+        v3_lazyRouteDiscovery: true,
+        unstable_optimizeDeps: true,
+        v3_routeConfig: true,
+        v3_singleFetch: true,
       },
       presets: [vercelPreset()],
     }),
