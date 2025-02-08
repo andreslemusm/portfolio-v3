@@ -1,5 +1,4 @@
-import { Link } from "@remix-run/react";
-import type { RemixLinkProps } from "@remix-run/react/dist/components";
+import { Link } from "react-router";
 import clsx from "clsx";
 
 const variantStyles = {
@@ -23,7 +22,7 @@ type AnchorProps = {
 
 type LinkProps = {
   as: "link";
-} & Omit<RemixLinkProps, "type">;
+} & Omit<React.ComponentProps<typeof Link>, "type">;
 
 export const Button = ({
   variant = "primary",

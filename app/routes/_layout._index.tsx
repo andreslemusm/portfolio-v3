@@ -6,7 +6,7 @@ import clsx from "clsx";
 import { generateMetaTags } from "~/utils/meta-tags";
 import { socialNetworks } from "~/utils/constants";
 import { BriefcaseIcon, DownloadCloudIcon } from "~/assets/icons/";
-import type { HeadersFunction, MetaFunction } from "@vercel/remix";
+import type { HeadersFunction, MetaFunction } from "react-router";
 import {
   barcelona,
   cartagena,

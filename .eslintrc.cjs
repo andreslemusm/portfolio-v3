@@ -65,14 +65,6 @@ module.exports = {
           {
             patterns: [
               {
-                group: ["@radix-ui/react-form"],
-                message: "Please use '~/components/lib' instead",
-              },
-              {
-                group: ["@remix-run/node"],
-                message: "Please use '@vercel/remix' instead",
-              },
-              {
                 group: ["valibot"],
                 message: "Please use '~/utils/validations' instead",
               },

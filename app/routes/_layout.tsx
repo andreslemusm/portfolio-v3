@@ -8,7 +8,7 @@ import {
   OuterContainer,
 } from "~/components/container";
 import { Fragment, useEffect, useRef } from "react";
-import { Link, NavLink, Outlet, useLocation } from "@remix-run/react";
+import { Link, NavLink, Outlet, useLocation } from "react-router";
 import { Popover, Transition } from "@headlessui/react";
 
 const Layout = () => {
@@ -346,7 +346,7 @@ const Layout = () => {
             <div className="border-t border-zinc-100 pb-16 pt-10 dark:border-zinc-700/40">
               <InnerContainer>
                 <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
-                  <div className="flex gap-6 text-sm ">
+                  <div className="flex gap-6 text-sm">
                     {paths.map((path) => (
                       <Link
                         key={path}

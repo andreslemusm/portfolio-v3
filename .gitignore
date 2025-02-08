@@ -1,14 +1,10 @@
-node_modules
-
-/.cache
-/build
-/public/build
-.env
-
-.vercel
-.output
-
-/api/index.js
-/api/index.js.map
-
+.DS_Store
+/node_modules/
 package-lock.json
+
+# React Router
+/.react-router/
+/build/
+
+# Vercel
+/.vercel/

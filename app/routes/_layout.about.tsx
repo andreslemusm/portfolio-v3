@@ -3,7 +3,7 @@ import { MailIcon } from "~/assets/icons";
 import { cacheHeader } from "pretty-cache-header";
 import { generateMetaTags } from "~/utils/meta-tags";
 import { portraitPicture } from "~/assets/images";
-import type { HeadersFunction, MetaFunction } from "@vercel/remix";
+import type { HeadersFunction, MetaFunction } from "react-router";
 import { mail, socialNetworks } from "~/utils/constants";
 
 const headers: HeadersFunction = () => ({

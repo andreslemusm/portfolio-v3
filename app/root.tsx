@@ -1,18 +1,7 @@
-/* eslint-disable import/group-exports
-  --
-  Vercel's config requires to be exported on its own, so we can't group all the exports together.
-*/
 import { Analytics } from "@vercel/analytics/react";
-import type { LinksFunction } from "@vercel/remix";
-import { SpeedInsights } from "@vercel/speed-insights/remix";
+import type { LinksFunction } from "react-router";
 import styles from "./tailwind.css?url";
-import {
-  Links,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
-} from "@remix-run/react";
+import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
 
 const links: LinksFunction = () => [
   // Favicons
@@ -46,7 +35,6 @@ const Layout = ({ children }: React.PropsWithChildren) => (
       {children}
       <ScrollRestoration />
       <Scripts />
-      <SpeedInsights />
       <Analytics />
     </body>
   </html>
@@ -88,8 +76,6 @@ const modeScript = `
 `;
 
 const App = () => <Outlet />;
-
-export const config = { runtime: "edge" };
 
 export { Layout, links };
 export default App;

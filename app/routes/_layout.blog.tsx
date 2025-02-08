@@ -1,7 +1,7 @@
 import { SimpleLayout } from "~/components/simple-layout";
 import { cacheHeader } from "pretty-cache-header";
 import { generateMetaTags } from "~/utils/meta-tags";
-import type { HeadersFunction, MetaFunction } from "@vercel/remix";
+import type { HeadersFunction, MetaFunction } from "react-router";
 
 const headers: HeadersFunction = () => ({
   "Cache-Control": cacheHeader({
