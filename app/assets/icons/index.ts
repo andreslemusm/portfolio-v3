@@ -3,7 +3,6 @@ export * from "./chevron-icon";
 export * from "./download-cloud-icon";
 export * from "./facebook-icon";
 export * from "./github-icon";
-export * from "./instagram-icon";
 export * from "./link-icon";
 export * from "./linkedin-icon";
 export * from "./moon-icon";
