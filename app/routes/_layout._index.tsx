@@ -71,7 +71,7 @@ const Home = () => (
             <ol className="mt-6 space-y-4">
               {resume.map((role) => (
                 <li key={role.company} className="flex gap-4">
-                  <div className="mt-1 grid h-10 w-10 flex-none place-items-center rounded-full ring-1 shadow-md shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                  <div className="mt-1 grid h-10 w-10 flex-none place-items-center rounded-full shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                     <img
                       src={role.logo}
                       alt={`${role.company} logo`}
