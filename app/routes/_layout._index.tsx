@@ -132,7 +132,7 @@ const Home = () => (
 const resume = [
   {
     company: "Sublime",
-    title: "Senior Frontend Engineer",
+    title: "Founding Frontend Engineer",
     logo: sublime,
     start: "Apr 2023",
     end: {
@@ -149,7 +149,7 @@ const resume = [
   },
   {
     company: "FitHub",
-    title: "Frontend Engineer",
+    title: "Founding Frontend Engineer",
     logo: fithub,
     start: "Sep 2020",
     end: "Jan 2021",
