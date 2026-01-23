@@ -95,7 +95,7 @@ const Home = () => (
                       }`}
                     >
                       <time dateTime={role.start}>{role.start}</time>{" "}
-                      <span aria-hidden="true">—</span>{" "}
+                      <span aria-hidden="true">-</span>{" "}
                       <time
                         dateTime={
                           typeof role.end === "string"
