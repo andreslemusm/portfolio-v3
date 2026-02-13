@@ -1,5 +1,7 @@
 import js from "@eslint/js";
+import { defineConfig } from "eslint/config";
 import prettier from "eslint-config-prettier";
+import stylistic from "@stylistic/eslint-plugin";
 import functional from "eslint-plugin-functional";
 import importX from "eslint-plugin-import-x";
 import jestDom from "eslint-plugin-jest-dom";
@@ -11,7 +13,7 @@ import unicorn from "eslint-plugin-unicorn";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 
-export default tseslint.config(
+export default defineConfig(
   // Global ignores
   {
     ignores: [
@@ -58,6 +60,7 @@ export default tseslint.config(
       },
     },
     plugins: {
+      "@stylistic": stylistic,
       react,
       "react-hooks": reactHooks,
       "jsx-a11y": jsxA11y,
@@ -80,10 +83,10 @@ export default tseslint.config(
     },
     rules: {
       // ESLint built-in rules
-      "line-comment-position": ["error", "above"],
-      "multiline-comment-style": ["error", "starred-block"],
+      "@stylistic/line-comment-position": ["error", "above"],
+      "@stylistic/multiline-comment-style": ["error", "starred-block"],
       "no-console": "error",
-      "padding-line-between-statements": [
+      "@stylistic/padding-line-between-statements": [
         "error",
         { blankLine: "always", prev: "*", next: "return" },
       ],
