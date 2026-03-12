@@ -359,7 +359,7 @@ const Layout = () => {
                     ))}
                   </div>
                   <p className="text-sm text-zinc-400 dark:text-zinc-500">
-                    &copy; {new Date().getFullYear()} Andres Lemus Madrid. All
+                    &copy; {new Date().getFullYear()} Andrés Lemus Madrid. All
                     rights reserved.
                   </p>
                 </div>

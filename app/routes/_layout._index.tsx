@@ -18,7 +18,7 @@ const headers: HeadersFunction = () => ({
 
 const meta: MetaFunction = () =>
   generateMetaTags({
-    title: "Andres Lemus Madrid",
+    title: "Andrés Lemus Madrid",
     description: "Frontend Engineer",
   });
 
@@ -30,7 +30,7 @@ const Home = () => (
           Frontend Engineer
         </h1>
         <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          Hi, I&apos;m Andres, a frontend engineer based in Medellín, Colombia.
+          Hi, I&apos;m Andrés, a frontend engineer based in Medellín, Colombia.
           Currently, I&apos;m leading frontend development at{" "}
           <a
             href="https://sublime.app/"
