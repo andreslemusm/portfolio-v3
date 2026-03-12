@@ -44,7 +44,7 @@ const About = () => (
             My tech journey began at the{" "}
             <a
               href="https://unal.edu.co/"
-              className="font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400"
+              className="font-medium text-zinc-800 transition-colors hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400"
             >
               National University of Colombia
             </a>
@@ -59,7 +59,7 @@ const About = () => (
             to mastering the craft. Using a structured{" "}
             <a
               href="https://roadmap.sh/frontend"
-              className="font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400"
+              className="font-medium text-zinc-800 transition-colors hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400"
             >
               learning path
             </a>
@@ -73,7 +73,7 @@ const About = () => (
             facing similar hurdles, I highly recommend this{" "}
             <a
               href="https://www.coursera.org/learn/learning-how-to-learn"
-              className="font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400"
+              className="font-medium text-zinc-800 transition-colors hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400"
             >
               learning techniques course
             </a>
@@ -89,7 +89,7 @@ const About = () => (
             to your projects,{" "}
             <a
               href={`mailto:${mail}`}
-              className="font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400"
+              className="font-medium text-zinc-800 transition-colors hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400"
             >
               I&apos;d love to connect!
             </a>
@@ -102,22 +102,22 @@ const About = () => (
             <a
               href={socialNetwork.href}
               target="_blank"
-              className="group flex items-center text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
+              className="group flex items-center text-sm font-medium text-zinc-800 transition-colors hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
               rel="noreferrer"
             >
-              <socialNetwork.icon className="h-5 w-5 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
+              <socialNetwork.icon className="h-5 w-5 flex-none fill-zinc-500 transition-colors group-hover:fill-teal-500" />
               <span className="ml-4">Follow on {socialNetwork.label}</span>
             </a>
           </li>
         ))}
         <li className="mt-4 border-t border-zinc-100 pt-8 dark:border-zinc-700/40">
           <a
-            className="group flex items-center text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
+            className="group flex items-center text-sm font-medium text-zinc-800 transition-colors hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
             href={`mailto:${mail}`}
             target="_blank"
             rel="noreferrer"
           >
-            <MailIcon className="h-5 w-5 flex-none text-zinc-500 transition group-hover:text-teal-500" />
+            <MailIcon className="h-5 w-5 flex-none text-zinc-500 transition-colors group-hover:text-teal-500" />
             <span className="ml-4">{mail}</span>
           </a>
         </li>

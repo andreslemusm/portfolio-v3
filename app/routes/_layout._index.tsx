@@ -34,7 +34,7 @@ const Home = () => (
           Currently, I&apos;m leading frontend development at{" "}
           <a
             href="https://sublime.app/"
-            className="font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400"
+            className="font-medium text-zinc-800 transition-colors hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400"
             target="_blank"
             rel="noreferrer"
           >
@@ -53,7 +53,7 @@ const Home = () => (
               target="_blank"
               rel="noreferrer"
             >
-              <socialNetwork.icon className="h-5 w-5 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
+              <socialNetwork.icon className="h-5 w-5 fill-zinc-500 transition-colors group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
             </a>
           ))}
         </div>
@@ -120,7 +120,7 @@ const Home = () => (
               download
             >
               Download Resume
-              <DownloadCloudIcon className="h-4 w-4 text-zinc-400 transition group-hover:text-zinc-600 group-active:text-zinc-600 dark:group-hover:text-zinc-50 dark:group-active:text-zinc-50" />
+              <DownloadCloudIcon className="h-4 w-4 text-zinc-400 transition-colors group-hover:text-zinc-600 group-active:text-zinc-600 dark:group-hover:text-zinc-50 dark:group-active:text-zinc-50" />
             </Button>
           </div>
         </div>

@@ -295,7 +295,7 @@ const Layout = () => {
                     <button
                       type="button"
                       aria-label="Toggle dark mode"
-                      className="group rounded-full bg-white/90 px-3 py-2 shadow-lg ring-1 shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
+                      className="group rounded-full bg-white/90 px-3 py-2 shadow-lg ring-1 shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm transition-colors dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
                       onClick={() => {
                         // Disable transitions temporarily
                         document.documentElement.classList.add(
@@ -324,8 +324,8 @@ const Layout = () => {
                         );
                       }}
                     >
-                      <SunIcon className="h-5 w-5 text-teal-400 transition group-hover:text-teal-500 dark:hidden" />
-                      <MoonIcon className="hidden h-5 w-5 text-zinc-700 transition group-hover:text-zinc-500 dark:block" />
+                      <SunIcon className="h-5 w-5 text-teal-400 transition-colors group-hover:text-teal-500 dark:hidden" />
+                      <MoonIcon className="hidden h-5 w-5 text-zinc-700 transition-colors group-hover:text-zinc-500 dark:block" />
                     </button>
                   </div>
                 </div>
@@ -352,7 +352,7 @@ const Layout = () => {
                         key={path}
                         to={`/${path}`}
                         prefetch="intent"
-                        className="font-medium text-zinc-800 capitalize transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400"
+                        className="font-medium text-zinc-800 capitalize transition-colors hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-400"
                       >
                         {path}
                       </Link>

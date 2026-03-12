@@ -42,7 +42,7 @@ const Projects = () => (
           <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
             {project.description}
           </p>
-          <p className="relative z-10 mt-6 flex items-center text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
+          <p className="relative z-10 mt-6 flex items-center text-sm font-medium text-zinc-400 transition-colors group-hover:text-teal-500 dark:text-zinc-200">
             <LinkIcon className="h-4 w-4" />
             <span className="ml-2">{project.link.label}</span>
           </p>
