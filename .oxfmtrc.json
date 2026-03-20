@@ -3,7 +3,6 @@
   "objectWrap": "collapse",
   "semi": false,
   "printWidth": 80,
-  "sortPackageJson": false,
   "sortTailwindcss": {
     "stylesheet": "./app/styles/tailwind.css",
     "functions": ["clsx", "cn", "cva"],

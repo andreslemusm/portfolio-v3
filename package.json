@@ -1,8 +1,8 @@
 {
   "name": "portfolio-v3",
-  "sideEffects": false,
   "private": true,
   "type": "module",
+  "sideEffects": false,
   "scripts": {
     "build": "react-router build",
     "dev": "react-router dev",
@@ -43,16 +43,16 @@
     "vite": "7.3.1",
     "vite-tsconfig-paths": "6.1.1"
   },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "engines": {
     "node": "24.x"
   },
   "volta": {
     "node": "24.13.1",
     "npm": "11.10.0"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }
