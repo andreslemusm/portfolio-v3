@@ -1,4 +1,4 @@
-import { GithubIcon, LinkedinIcon, TwitterXIcon } from "~/assets/icons";
+import { GithubIcon, LinkedinIcon, TwitterXIcon } from "~/assets/icons"
 
 const socialNetworks = [
   {
@@ -16,8 +16,8 @@ const socialNetworks = [
     href: "https://www.linkedin.com/in/andreslemusm",
     icon: LinkedinIcon,
   },
-];
+]
 
-const mail = "aclmadrid04@gmail.com";
+const mail = "aclmadrid04@gmail.com"
 
-export { socialNetworks, mail };
+export { socialNetworks, mail }

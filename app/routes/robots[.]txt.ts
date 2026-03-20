@@ -1,7 +1,8 @@
-import type { LoaderFunctionArgs } from "react-router";
-import { cacheHeader } from "pretty-cache-header";
-import { generateRobotsTxt } from "@forge42/seo-tools/robots";
-import { getDomainUrl } from "~/utils/mics.server";
+import { generateRobotsTxt } from "@forge42/seo-tools/robots"
+import { cacheHeader } from "pretty-cache-header"
+import type { LoaderFunctionArgs } from "react-router"
+
+import { getDomainUrl } from "~/utils/mics.server"
 
 export const loader = ({ request }: LoaderFunctionArgs) => {
   const robotsTxt = generateRobotsTxt([
@@ -10,7 +11,7 @@ export const loader = ({ request }: LoaderFunctionArgs) => {
       allow: ["/"],
       sitemap: [`${getDomainUrl(request)}/sitemap.xml`],
     },
-  ]);
+  ])
 
   return new Response(robotsTxt, {
     headers: {
@@ -21,5 +22,5 @@ export const loader = ({ request }: LoaderFunctionArgs) => {
         staleWhileRevalidate: "1month",
       }),
     },
-  });
-};
+  })
+}

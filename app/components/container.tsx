@@ -1,5 +1,5 @@
-import clsx from "clsx";
-import { forwardRef } from "react";
+import clsx from "clsx"
+import { forwardRef } from "react"
 
 const OuterContainer = forwardRef(
   (
@@ -10,9 +10,9 @@ const OuterContainer = forwardRef(
       <div className="mx-auto max-w-7xl lg:px-8">{children}</div>
     </div>
   ),
-);
+)
 if (process.env.NODE_ENV === "development") {
-  OuterContainer.displayName = "OuterContainer";
+  OuterContainer.displayName = "OuterContainer"
 }
 
 const InnerContainer = forwardRef(
@@ -28,11 +28,11 @@ const InnerContainer = forwardRef(
       >
         <div className="mx-auto max-w-2xl lg:max-w-5xl">{children}</div>
       </div>
-    );
+    )
   },
-);
+)
 if (process.env.NODE_ENV === "development") {
-  InnerContainer.displayName = "InnerContainer";
+  InnerContainer.displayName = "InnerContainer"
 }
 
 const Container = forwardRef(
@@ -44,11 +44,11 @@ const Container = forwardRef(
       <OuterContainer ref={ref} {...props}>
         <InnerContainer>{children}</InnerContainer>
       </OuterContainer>
-    );
+    )
   },
-);
+)
 if (process.env.NODE_ENV === "development") {
-  Container.displayName = "Container";
+  Container.displayName = "Container"
 }
 
-export { Container, InnerContainer, OuterContainer };
+export { Container, InnerContainer, OuterContainer }

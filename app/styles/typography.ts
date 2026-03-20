@@ -1,4 +1,4 @@
-import { type Config } from "tailwindcss";
+import { type Config } from "tailwindcss"
 
 export default {
   theme: {
@@ -98,14 +98,10 @@ export default {
             marginTop: theme("spacing.16"),
             marginBottom: theme("spacing.4"),
           },
-          ":is(h2, h3) + *": {
-            marginTop: 0,
-          },
+          ":is(h2, h3) + *": { marginTop: 0 },
 
           // Images
-          img: {
-            borderRadius: theme("borderRadius.3xl"),
-          },
+          img: { borderRadius: theme("borderRadius.3xl") },
 
           // Inline elements
           a: {
@@ -135,12 +131,8 @@ export default {
             paddingLeft: theme("spacing.1"),
             paddingRight: theme("spacing.1"),
           },
-          "a code": {
-            color: "inherit",
-          },
-          ":is(h2, h3) code": {
-            fontWeight: theme("fontWeight.bold"),
-          },
+          "a code": { color: "inherit" },
+          ":is(h2, h3) code": { fontWeight: theme("fontWeight.bold") },
 
           // Quotes
           blockquote: {
@@ -157,20 +149,12 @@ export default {
             lineHeight: theme("lineHeight.6"),
             marginTop: theme("spacing.3"),
           },
-          "figcaption > p": {
-            margin: 0,
-          },
+          "figcaption > p": { margin: 0 },
 
           // Lists
-          ul: {
-            listStyleType: "disc",
-          },
-          ol: {
-            listStyleType: "decimal",
-          },
-          "ul, ol": {
-            paddingLeft: theme("spacing.6"),
-          },
+          ul: { listStyleType: "disc" },
+          ol: { listStyleType: "decimal" },
+          "ul, ol": { paddingLeft: theme("spacing.6") },
           li: {
             marginTop: theme("spacing.6"),
             marginBottom: theme("spacing.6"),
@@ -180,12 +164,8 @@ export default {
             fontSize: theme("fontSize.sm")[0],
             fontWeight: theme("fontWeight.semibold"),
           },
-          "ol > li::marker": {
-            color: "var(--tw-prose-counters)",
-          },
-          "ul > li::marker": {
-            color: "var(--tw-prose-bullets)",
-          },
+          "ol > li::marker": { color: "var(--tw-prose-counters)" },
+          "ul > li::marker": { color: "var(--tw-prose-bullets)" },
           "li :is(ol, ul)": {
             marginTop: theme("spacing.4"),
             marginBottom: theme("spacing.4"),
@@ -246,29 +226,19 @@ export default {
             verticalAlign: "bottom",
             paddingBottom: theme("spacing.2"),
           },
-          "thead th:not(:first-child)": {
-            paddingLeft: theme("spacing.2"),
-          },
-          "thead th:not(:last-child)": {
-            paddingRight: theme("spacing.2"),
-          },
+          "thead th:not(:first-child)": { paddingLeft: theme("spacing.2") },
+          "thead th:not(:last-child)": { paddingRight: theme("spacing.2") },
           "tbody tr": {
             borderBottomWidth: "1px",
             borderBottomColor: "var(--tw-prose-td-borders)",
           },
-          "tbody tr:last-child": {
-            borderBottomWidth: 0,
-          },
-          "tbody td": {
-            verticalAlign: "baseline",
-          },
+          "tbody tr:last-child": { borderBottomWidth: 0 },
+          "tbody td": { verticalAlign: "baseline" },
           tfoot: {
             borderTopWidth: "1px",
             borderTopColor: "var(--tw-prose-th-borders)",
           },
-          "tfoot td": {
-            verticalAlign: "top",
-          },
+          "tfoot td": { verticalAlign: "top" },
           ":is(tbody, tfoot) td": {
             paddingTop: theme("spacing.2"),
             paddingBottom: theme("spacing.2"),
@@ -283,4 +253,4 @@ export default {
       },
     }),
   },
-} satisfies Config;
+} satisfies Config

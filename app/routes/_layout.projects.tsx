@@ -1,9 +1,10 @@
-import { SimpleLayout } from "~/components/simple-layout";
-import { cacheHeader } from "pretty-cache-header";
-import { generateMetaTags } from "~/utils/meta-tags";
-import type { HeadersFunction, MetaFunction } from "react-router";
-import { LinkIcon, OttomotoIcon, RMDBIcon } from "~/assets/icons";
-import { carrierAssure, fithub, sublime } from "~/assets/images";
+import { cacheHeader } from "pretty-cache-header"
+import type { HeadersFunction, MetaFunction } from "react-router"
+
+import { LinkIcon, OttomotoIcon, RMDBIcon } from "~/assets/icons"
+import { carrierAssure, fithub, sublime } from "~/assets/images"
+import { SimpleLayout } from "~/components/simple-layout"
+import { generateMetaTags } from "~/utils/meta-tags"
 
 const headers: HeadersFunction = () => ({
   "Cache-Control": cacheHeader({
@@ -11,14 +12,14 @@ const headers: HeadersFunction = () => ({
     maxAge: "1m",
     staleWhileRevalidate: "1month",
   }),
-});
+})
 
 const meta: MetaFunction = () =>
   generateMetaTags({
     title: "Projects - Andrés Lemus Madrid",
     description:
       "A showcase of my most impactful projects in frontend development.",
-  });
+  })
 
 const Projects = () => (
   <SimpleLayout
@@ -50,17 +51,14 @@ const Projects = () => (
       ))}
     </ul>
   </SimpleLayout>
-);
+)
 
 const projects = [
   {
     name: "Sublime",
     description:
       "A revolutionary platform reimagining how we interact with digital content, designed to create a more focused and meaningful online experience.",
-    link: {
-      href: "https://sublime.app",
-      label: "sublime.app",
-    },
+    link: { href: "https://sublime.app", label: "sublime.app" },
     logo: (
       <img
         src={sublime}
@@ -73,10 +71,7 @@ const projects = [
     name: "Carrier Assure",
     description:
       "An innovative carrier performance scoring platform that leverages data analytics to optimize logistics partnerships and streamline carrier selection.",
-    link: {
-      href: "https://carrierassure.com",
-      label: "carrierassure.com",
-    },
+    link: { href: "https://carrierassure.com", label: "carrierassure.com" },
     logo: (
       <img
         src={carrierAssure}
@@ -89,10 +84,7 @@ const projects = [
     name: "Ottomoto",
     description:
       "A comprehensive automotive financing platform that revolutionizes dealership operations by expanding lender networks and accelerating deal closures.",
-    link: {
-      href: "https://ottomoto.net",
-      label: "ottomoto.net",
-    },
+    link: { href: "https://ottomoto.net", label: "ottomoto.net" },
     logo: (
       <OttomotoIcon
         role="img"
@@ -105,10 +97,7 @@ const projects = [
     name: "FitHub",
     description:
       "A curated marketplace connecting health enthusiasts with premium wellness products and nutritional supplements.",
-    link: {
-      href: "https://fithub.com.co",
-      label: "fithub.com.co",
-    },
+    link: { href: "https://fithub.com.co", label: "fithub.com.co" },
     logo: (
       <img
         src={fithub}
@@ -133,7 +122,7 @@ const projects = [
       />
     ),
   },
-];
+]
 
-export { headers, meta };
-export default Projects;
+export { headers, meta }
+export default Projects

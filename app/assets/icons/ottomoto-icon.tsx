@@ -19,4 +19,4 @@ export const OttomotoIcon = (props: React.ComponentPropsWithoutRef<"svg">) => (
       d="M88.83 8.69V.94h2.55V0h-6.14v.94h2.55v7.75zm5.12 0V5.3l-.1-3.63 2.6 7.02h.8l2.6-7.04-.1 3.65v3.39h1.05V0h-1.36l-2.6 7.09L94.25 0H92.9v8.69z"
     />
   </svg>
-);
+)

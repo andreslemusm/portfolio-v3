@@ -1,12 +1,13 @@
-import { Button } from "~/components/button";
-import { Container } from "~/components/container";
-import { Fragment } from "react";
-import { cacheHeader } from "pretty-cache-header";
-import { generateMetaTags } from "~/utils/meta-tags";
-import { socialNetworks } from "~/utils/constants";
-import { BriefcaseIcon, DownloadCloudIcon } from "~/assets/icons/";
-import type { HeadersFunction, MetaFunction } from "react-router";
-import { fithub, fluidAttacks, leanTech, sublime } from "~/assets/images";
+import { cacheHeader } from "pretty-cache-header"
+import { Fragment } from "react"
+import type { HeadersFunction, MetaFunction } from "react-router"
+
+import { BriefcaseIcon, DownloadCloudIcon } from "~/assets/icons/"
+import { fithub, fluidAttacks, leanTech, sublime } from "~/assets/images"
+import { Button } from "~/components/button"
+import { Container } from "~/components/container"
+import { socialNetworks } from "~/utils/constants"
+import { generateMetaTags } from "~/utils/meta-tags"
 
 const headers: HeadersFunction = () => ({
   "Cache-Control": cacheHeader({
@@ -14,13 +15,13 @@ const headers: HeadersFunction = () => ({
     maxAge: "1m",
     staleWhileRevalidate: "1month",
   }),
-});
+})
 
 const meta: MetaFunction = () =>
   generateMetaTags({
     title: "Andrés Lemus Madrid",
     description: "Frontend Engineer",
-  });
+  })
 
 const Home = () => (
   <Fragment>
@@ -127,7 +128,7 @@ const Home = () => (
       </div>
     </Container>
   </Fragment>
-);
+)
 
 const resume = [
   {
@@ -135,10 +136,7 @@ const resume = [
     title: "Founding Frontend Engineer",
     logo: sublime,
     start: "Apr 2023",
-    end: {
-      label: "Present",
-      dateTime: new Date().getFullYear(),
-    },
+    end: { label: "Present", dateTime: new Date().getFullYear() },
   },
   {
     company: "Lean Tech",
@@ -161,7 +159,7 @@ const resume = [
     start: "May 2019",
     end: "Aug 2020",
   },
-];
+]
 
-export { meta, headers };
-export default Home;
+export { meta, headers }
+export default Home

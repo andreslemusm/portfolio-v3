@@ -1,7 +1,8 @@
-import { Analytics } from "@vercel/analytics/react";
-import type { LinksFunction } from "react-router";
-import styles from "./styles/tailwind.css?url";
-import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
+import { Analytics } from "@vercel/analytics/react"
+import type { LinksFunction } from "react-router"
+import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router"
+
+import styles from "./styles/tailwind.css?url"
 
 const links: LinksFunction = () => [
   // Favicons
@@ -22,7 +23,7 @@ const links: LinksFunction = () => [
   { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#5bbad5" },
   // Stylesheets
   { rel: "stylesheet", href: styles },
-];
+]
 
 const Layout = ({ children }: React.PropsWithChildren) => (
   <html lang="en" className="h-full antialiased">
@@ -38,7 +39,7 @@ const Layout = ({ children }: React.PropsWithChildren) => (
       <Analytics />
     </body>
   </html>
-);
+)
 
 const modeScript = `
   let darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
@@ -73,9 +74,9 @@ const modeScript = `
     disableTransitionsTemporarily()
     updateMode()
   }
-`;
+`
 
-const App = () => <Outlet />;
+const App = () => <Outlet />
 
-export { Layout, links };
-export default App;
+export { Layout, links }
+export default App

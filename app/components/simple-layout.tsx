@@ -1,13 +1,13 @@
-import { Container } from "./container";
+import { Container } from "./container"
 
 export const SimpleLayout = ({
   title,
   intro,
   children,
 }: {
-  title: string;
-  intro: string;
-  children?: React.ReactNode;
+  title: string
+  intro: string
+  children?: React.ReactNode
 }) => {
   return (
     <Container className="mt-16 sm:mt-32">
@@ -21,5 +21,5 @@ export const SimpleLayout = ({
       </header>
       <div className="mt-16 sm:mt-20">{children}</div>
     </Container>
-  );
-};
+  )
+}

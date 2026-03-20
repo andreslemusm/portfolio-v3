@@ -1,121 +1,129 @@
-import { clamp } from "~/utils/formatters";
-import clsx from "clsx";
-import { profilePicture } from "~/assets/images";
-import { ChevronIcon, MoonIcon, SunIcon, XIcon } from "~/assets/icons";
+import {
+  Popover,
+  PopoverBackdrop,
+  PopoverButton,
+  PopoverPanel,
+  Transition,
+  TransitionChild,
+} from "@headlessui/react"
+import clsx from "clsx"
+import { Fragment, useEffect, useRef } from "react"
+import { Link, NavLink, Outlet, useLocation } from "react-router"
+
+import { ChevronIcon, MoonIcon, SunIcon, XIcon } from "~/assets/icons"
+import { profilePicture } from "~/assets/images"
 import {
   Container,
   InnerContainer,
   OuterContainer,
-} from "~/components/container";
-import { Fragment, useEffect, useRef } from "react";
-import { Link, NavLink, Outlet, useLocation } from "react-router";
-import { Popover, Transition } from "@headlessui/react";
+} from "~/components/container"
+import { clamp } from "~/utils/formatters"
 
 const Layout = () => {
-  const location = useLocation();
-  const isHomePage = location.pathname === "/";
+  const location = useLocation()
+  const isHomePage = location.pathname === "/"
 
-  const avatarRef = useRef<HTMLDivElement>(null);
-  const headerRef = useRef<HTMLDivElement>(null);
-  const isInitial = useRef(true);
+  const avatarRef = useRef<HTMLDivElement>(null)
+  const headerRef = useRef<HTMLDivElement>(null)
+  const isInitial = useRef(true)
 
   useEffect(() => {
-    const downDelay = avatarRef.current?.offsetTop ?? 0;
-    const upDelay = 64;
+    const downDelay = avatarRef.current?.offsetTop ?? 0
+    const upDelay = 64
 
     const setProperty = (property: string, value: string | null) => {
-      document.documentElement.style.setProperty(property, value);
-    };
+      document.documentElement.style.setProperty(property, value)
+    }
     const removeProperty = (property: string) => {
-      document.documentElement.style.removeProperty(property);
-    };
+      document.documentElement.style.removeProperty(property)
+    }
 
     const updateHeaderStyles = () => {
-      if (!headerRef.current) throw Error("headerRef is not assigned");
-      const { top, height } = headerRef.current.getBoundingClientRect();
+      if (!headerRef.current) throw Error("headerRef is not assigned")
+      const { top, height } = headerRef.current.getBoundingClientRect()
       const scrollY = clamp(
         window.scrollY,
         0,
         document.body.scrollHeight - window.innerHeight,
-      );
+      )
 
       if (isInitial.current) {
-        setProperty("--header-position", "sticky");
+        setProperty("--header-position", "sticky")
       }
 
-      setProperty("--content-offset", `${downDelay}px`);
+      setProperty("--content-offset", `${downDelay}px`)
 
       if (isInitial.current || scrollY < downDelay) {
-        setProperty("--header-height", `${downDelay + height}px`);
-        setProperty("--header-mb", `${-downDelay}px`);
+        setProperty("--header-height", `${downDelay + height}px`)
+        setProperty("--header-mb", `${-downDelay}px`)
       } else if (top + height < -upDelay) {
-        const offset = Math.max(height, scrollY - upDelay);
-        setProperty("--header-height", `${offset}px`);
-        setProperty("--header-mb", `${height - offset}px`);
+        const offset = Math.max(height, scrollY - upDelay)
+        setProperty("--header-height", `${offset}px`)
+        setProperty("--header-mb", `${height - offset}px`)
       } else if (top === 0) {
-        setProperty("--header-height", `${scrollY + height}px`);
-        setProperty("--header-mb", `${-scrollY}px`);
+        setProperty("--header-height", `${scrollY + height}px`)
+        setProperty("--header-mb", `${-scrollY}px`)
       }
 
       if (top === 0 && scrollY > 0 && scrollY >= downDelay) {
-        setProperty("--header-inner-position", "fixed");
-        removeProperty("--header-top");
-        removeProperty("--avatar-top");
+        setProperty("--header-inner-position", "fixed")
+        removeProperty("--header-top")
+        removeProperty("--avatar-top")
       } else {
-        removeProperty("--header-inner-position");
-        setProperty("--header-top", "0px");
-        setProperty("--avatar-top", "0px");
+        removeProperty("--header-inner-position")
+        setProperty("--header-top", "0px")
+        setProperty("--avatar-top", "0px")
       }
-    };
+    }
 
     const updateAvatarStyles = () => {
       if (!isHomePage) {
-        return;
+        return
       }
 
-      const fromScale = 1;
-      const toScale = 36 / 64;
-      const fromX = 0;
-      const toX = 2 / 16;
+      const fromScale = 1
+      const toScale = 36 / 64
+      const fromX = 0
+      const toX = 2 / 16
 
-      const scrollY = downDelay - window.scrollY;
+      const scrollY = downDelay - window.scrollY
 
       const scale = clamp(
         (scrollY * (fromScale - toScale)) / downDelay + toScale,
         fromScale,
         toScale,
-      );
+      )
 
-      const x = clamp((scrollY * (fromX - toX)) / downDelay + toX, fromX, toX);
+      const x = clamp((scrollY * (fromX - toX)) / downDelay + toX, fromX, toX)
 
       setProperty(
         "--avatar-image-transform",
         `translate3d(${x}rem, 0, 0) scale(${scale})`,
-      );
+      )
 
-      const borderScale = 1 / (toScale / scale);
-      const borderX = (-toX + x) * borderScale;
-      const borderTransform = `translate3d(${borderX}rem, 0, 0) scale(${borderScale})`;
+      const borderScale = 1 / (toScale / scale)
+      const borderX = (-toX + x) * borderScale
+      const borderTransform = `translate3d(${borderX}rem, 0, 0) scale(${borderScale})`
 
-      setProperty("--avatar-border-transform", borderTransform);
-      setProperty("--avatar-border-opacity", scale === toScale ? "1" : "0");
-    };
+      setProperty("--avatar-border-transform", borderTransform)
+      setProperty("--avatar-border-opacity", scale === toScale ? "1" : "0")
+    }
 
     const updateStyles = () => {
-      updateHeaderStyles();
-      updateAvatarStyles();
-      isInitial.current = false;
-    };
+      updateHeaderStyles()
+      updateAvatarStyles()
+      isInitial.current = false
+    }
 
-    updateStyles();
-    window.addEventListener("scroll", updateStyles, { passive: true });
-    window.addEventListener("resize", updateStyles);
+    updateStyles()
+    window.addEventListener("scroll", updateStyles, { passive: true })
+    window.addEventListener("resize", updateStyles)
 
     return () => {
-      window.removeEventListener("scroll", updateStyles);
-      window.removeEventListener("resize", updateStyles);
-    };
-  }, [isHomePage]);
+      window.removeEventListener("scroll", updateStyles)
+      window.removeEventListener("resize", updateStyles)
+    }
+  }, [isHomePage])
 
   return (
     <Fragment>
@@ -197,12 +205,12 @@ const Layout = () => {
                 <div className="flex flex-1 justify-end md:justify-center">
                   {/* Mobile Navigation */}
                   <Popover className="pointer-events-auto md:hidden">
-                    <Popover.Button className="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg ring-1 shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
+                    <PopoverButton className="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg ring-1 shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
                       Menu
                       <ChevronIcon className="ml-3 h-auto w-2 stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400" />
-                    </Popover.Button>
-                    <Transition.Root>
-                      <Transition.Child
+                    </PopoverButton>
+                    <Transition>
+                      <TransitionChild
                         as={Fragment}
                         enter="duration-150 ease-out"
                         enterFrom="opacity-0"
@@ -211,9 +219,9 @@ const Layout = () => {
                         leaveFrom="opacity-100"
                         leaveTo="opacity-0"
                       >
-                        <Popover.Overlay className="fixed inset-0 z-30 bg-zinc-800/40 backdrop-blur-xs dark:bg-black/80" />
-                      </Transition.Child>
-                      <Transition.Child
+                        <PopoverBackdrop className="fixed inset-0 z-30 bg-zinc-800/40 backdrop-blur-xs dark:bg-black/80" />
+                      </TransitionChild>
+                      <TransitionChild
                         as={Fragment}
                         enter="duration-150 ease-out"
                         enterFrom="scale-95 opacity-0"
@@ -222,17 +230,17 @@ const Layout = () => {
                         leaveFrom="scale-100 opacity-100"
                         leaveTo="scale-95 opacity-0"
                       >
-                        <Popover.Panel
+                        <PopoverPanel
                           focus
                           className="fixed inset-x-4 top-8 z-30 origin-top rounded-3xl bg-white p-8 ring-1 ring-zinc-900/5 dark:bg-zinc-900 dark:ring-zinc-800"
                         >
                           <div className="flex flex-row-reverse items-center justify-between">
-                            <Popover.Button
+                            <PopoverButton
                               aria-label="Close menu"
                               className="-m-1 p-1"
                             >
                               <XIcon className="h-6 w-6 text-zinc-500 dark:text-zinc-400" />
-                            </Popover.Button>
+                            </PopoverButton>
                             <h2 className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
                               Navigation
                             </h2>
@@ -241,21 +249,21 @@ const Layout = () => {
                             <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
                               {paths.map((path) => (
                                 <li key={path}>
-                                  <Popover.Button
+                                  <PopoverButton
                                     as={Link}
                                     to={`/${path}`}
                                     className="block py-2 capitalize"
                                     prefetch="intent"
                                   >
                                     {path}
-                                  </Popover.Button>
+                                  </PopoverButton>
                                 </li>
                               ))}
                             </ul>
                           </nav>
-                        </Popover.Panel>
-                      </Transition.Child>
-                    </Transition.Root>
+                        </PopoverPanel>
+                      </TransitionChild>
+                    </Transition>
                   </Popover>
                   {/* End Mobile Navigation */}
                   {/* DesktopNavigation */}
@@ -300,28 +308,28 @@ const Layout = () => {
                         // Disable transitions temporarily
                         document.documentElement.classList.add(
                           "**:transition-none!",
-                        );
+                        )
                         window.setTimeout(() => {
                           document.documentElement.classList.remove(
                             "**:transition-none!",
-                          );
-                        }, 0);
+                          )
+                        }, 0)
 
                         const darkModeMediaQuery = window.matchMedia(
                           "(prefers-color-scheme: dark)",
-                        );
-                        const isSystemDarkMode = darkModeMediaQuery.matches;
+                        )
+                        const isSystemDarkMode = darkModeMediaQuery.matches
                         const isDarkMode =
-                          document.documentElement.classList.toggle("dark");
+                          document.documentElement.classList.toggle("dark")
 
                         if (isDarkMode === isSystemDarkMode) {
-                          return window.localStorage.removeItem("isDarkMode");
+                          return window.localStorage.removeItem("isDarkMode")
                         }
 
                         return window.localStorage.setItem(
                           "isDarkMode",
                           isDarkMode.toString(),
-                        );
+                        )
                       }}
                     >
                       <SunIcon className="h-5 w-5 text-teal-400 transition-colors group-hover:text-teal-500 dark:hidden" />
@@ -370,14 +378,14 @@ const Layout = () => {
         {/* End Footer */}
       </div>
     </Fragment>
-  );
-};
+  )
+}
 
 type AvatarProps = {
-  large?: boolean;
-  className?: string;
-  style?: React.CSSProperties;
-};
+  large?: boolean
+  className?: string
+  style?: React.CSSProperties
+}
 
 const Avatar = ({ large = false, className, style }: AvatarProps) => (
   <Link
@@ -397,8 +405,8 @@ const Avatar = ({ large = false, className, style }: AvatarProps) => (
       )}
     />
   </Link>
-);
+)
 
-const paths = ["about", "projects", "blog"];
+const paths = ["about", "projects", "blog"]
 
-export default Layout;
+export default Layout

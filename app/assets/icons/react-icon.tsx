@@ -1,6 +1,4 @@
-type ReactIconProps = {
-  className?: string;
-};
+type ReactIconProps = { className?: string }
 
 export const ReactIcon = ({ className }: ReactIconProps) => (
   <svg
@@ -17,4 +15,4 @@ export const ReactIcon = ({ className }: ReactIconProps) => (
       <ellipse rx="11" ry="4.2" transform="rotate(120)" />
     </g>
   </svg>
-);
+)

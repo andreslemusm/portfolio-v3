@@ -1,0 +1,30 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "objectWrap": "collapse",
+  "semi": false,
+  "printWidth": 80,
+  "sortPackageJson": false,
+  "sortTailwindcss": {
+    "stylesheet": "./app/styles/tailwind.css",
+    "functions": ["clsx", "cn", "cva"],
+    "attributes": [
+      "leave",
+      "leaveFrom",
+      "leaveTo",
+      "enter",
+      "enterFrom",
+      "enterTo"
+    ]
+  },
+  "sortImports": {},
+  "ignorePatterns": [
+    ".DS_Store",
+    "/node_modules/",
+    "package-lock.json",
+    "/.react-router/",
+    "/build/",
+    "/.vercel/",
+    ".agents/**",
+    ".cursor/**"
+  ]
+}

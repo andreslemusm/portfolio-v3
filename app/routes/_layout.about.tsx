@@ -1,10 +1,11 @@
-import { Container } from "~/components/container";
-import { MailIcon } from "~/assets/icons";
-import { cacheHeader } from "pretty-cache-header";
-import { generateMetaTags } from "~/utils/meta-tags";
-import { portraitPicture } from "~/assets/images";
-import type { HeadersFunction, MetaFunction } from "react-router";
-import { mail, socialNetworks } from "~/utils/constants";
+import { cacheHeader } from "pretty-cache-header"
+import type { HeadersFunction, MetaFunction } from "react-router"
+
+import { MailIcon } from "~/assets/icons"
+import { portraitPicture } from "~/assets/images"
+import { Container } from "~/components/container"
+import { mail, socialNetworks } from "~/utils/constants"
+import { generateMetaTags } from "~/utils/meta-tags"
 
 const headers: HeadersFunction = () => ({
   "Cache-Control": cacheHeader({
@@ -12,14 +13,14 @@ const headers: HeadersFunction = () => ({
     maxAge: "1m",
     staleWhileRevalidate: "1month",
   }),
-});
+})
 
 const meta: MetaFunction = () =>
   generateMetaTags({
     title: "About - Andrés Lemus Madrid",
     description:
       "I'm a frontend engineer passionate about building exceptional web experiences",
-  });
+  })
 
 const About = () => (
   <Container className="mt-16 sm:mt-32">
@@ -124,7 +125,7 @@ const About = () => (
       </ul>
     </div>
   </Container>
-);
+)
 
-export { meta, headers };
-export default About;
+export { meta, headers }
+export default About

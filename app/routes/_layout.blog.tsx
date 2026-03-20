@@ -1,7 +1,8 @@
-import { SimpleLayout } from "~/components/simple-layout";
-import { cacheHeader } from "pretty-cache-header";
-import { generateMetaTags } from "~/utils/meta-tags";
-import type { HeadersFunction, MetaFunction } from "react-router";
+import { cacheHeader } from "pretty-cache-header"
+import type { HeadersFunction, MetaFunction } from "react-router"
+
+import { SimpleLayout } from "~/components/simple-layout"
+import { generateMetaTags } from "~/utils/meta-tags"
 
 const headers: HeadersFunction = () => ({
   "Cache-Control": cacheHeader({
@@ -9,21 +10,21 @@ const headers: HeadersFunction = () => ({
     maxAge: "1m",
     staleWhileRevalidate: "1month",
   }),
-});
+})
 
 const meta: MetaFunction = () =>
   generateMetaTags({
     title: "Blog - Andrés Lemus Madrid",
     description:
       "Insights and reflections on frontend development, modern web technologies, and building exceptional user experiences.",
-  });
+  })
 
 const Blog = () => (
   <SimpleLayout
     title="Thoughts on Frontend Development and Beyond"
     intro="A collection of articles sharing my experiences, learnings, and perspectives on building better web applications. Stay tuned for upcoming posts!"
   />
-);
+)
 
-export { headers, meta };
-export default Blog;
+export { headers, meta }
+export default Blog
