@@ -7,25 +7,25 @@
     "build": "react-router build",
     "dev": "react-router dev",
     "commit": "cz",
-    "static-analysis": "tsc && oxfmt --check . && oxlint --type-aware .",
+    "static-analysis": "react-router typegen && tsc && oxfmt --check . && oxlint --type-aware .",
     "static-analysis:fix": "oxfmt --write . && oxlint --type-aware --fix .",
     "knip": "knip"
   },
   "dependencies": {
     "@forge42/seo-tools": "1.4.5",
     "@headlessui/react": "2.2.10",
-    "@react-router/node": "7.13.0",
+    "@react-router/node": "7.18.0",
     "@vercel/analytics": "2.0.1",
     "clsx": "2.1.1",
     "isbot": "5.1.43",
     "pretty-cache-header": "1.0.0",
     "react": "19.2.7",
     "react-dom": "19.2.7",
-    "react-router": "7.13.0"
+    "react-router": "7.18.0"
   },
   "devDependencies": {
-    "@react-router/dev": "7.13.0",
-    "@react-router/fs-routes": "7.13.0",
+    "@react-router/dev": "7.18.0",
+    "@react-router/fs-routes": "7.18.0",
     "@tailwindcss/typography": "0.5.20",
     "@tailwindcss/vite": "4.3.1",
     "@total-typescript/ts-reset": "0.6.1",
@@ -40,9 +40,8 @@
     "oxlint": "1.70.0",
     "oxlint-tsgolint": "0.23.0",
     "tailwindcss": "4.3.1",
-    "typescript": "5.9.3",
-    "vite": "7.3.1",
-    "vite-tsconfig-paths": "6.1.1"
+    "typescript": "6.0.3",
+    "vite": "8.0.16"
   },
   "config": {
     "commitizen": {
