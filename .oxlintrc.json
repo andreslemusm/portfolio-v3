@@ -260,7 +260,7 @@
         "@typescript-eslint/no-deprecated": "error",
         "unicorn/filename-case": [
           "error",
-          { "case": "kebabCase", "ignore": "^_|\\$|\\[\\.\\]" }
+          { "case": "kebabCase", "ignore": ["^_", "\\$", "\\[\\.\\]"] }
         ]
       },
       "plugins": ["typescript", "react", "jsx-a11y", "import", "unicorn"],
